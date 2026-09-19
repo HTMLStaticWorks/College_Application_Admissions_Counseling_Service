@@ -1868,12 +1868,6 @@ html[dir="rtl"] .auth-topbar {
   color: var(--accent);
   font-size: 1.45rem;
   background-color: var(--accent-tint);
-  transition: transform 0.3s ease, background-color 0.3s ease;
-}
-
-.auth-brand:hover .auth-brand-badge {
-  transform: scale(1.06);
-  background-color: var(--accent-tint-strong);
 }
 
 .auth-brand-name {
@@ -1881,7 +1875,7 @@ html[dir="rtl"] .auth-topbar {
   font-size: 1.55rem;
   font-weight: 600;
   letter-spacing: -0.02em;
-  color: var(--primary);
+  color: var(--accent);
 }
 
 .auth-brand-name span {
@@ -1889,7 +1883,7 @@ html[dir="rtl"] .auth-topbar {
 }
 
 [data-theme="dark"] .auth-brand-name {
-  color: #ffffff;
+  color: var(--accent);
 }
 
 /* Headings */
@@ -2245,18 +2239,48 @@ html[dir="rtl"] .password-toggle {
   color: var(--accent-2);
 }
 
-@media (max-width: 480px) {
-  .auth-card {
-    border-radius: 28px;
-    padding: 34px 22px 28px;
+@media (max-width: 768px) {
+  .auth-body {
+    justify-content: flex-start;
+    padding-top: 76px;
+    padding-bottom: 40px;
+    padding-left: var(--spacing-3);
+    padding-right: var(--spacing-3);
   }
   .auth-topbar {
-    top: 14px;
-    right: 14px;
+    top: 18px;
+    right: 20px;
+    z-index: 20;
+    pointer-events: none;
+  }
+  .auth-top-actions {
+    pointer-events: auto;
   }
   html[dir="rtl"] .auth-topbar {
     right: auto;
-    left: 14px;
+    left: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-body {
+    padding-top: 72px;
+    padding-bottom: 32px;
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .auth-card {
+    border-radius: 28px;
+    padding: 34px 22px 28px;
+    margin-top: 6px;
+  }
+  .auth-topbar {
+    top: 14px;
+    right: 16px;
+  }
+  html[dir="rtl"] .auth-topbar {
+    right: auto;
+    left: 16px;
   }
 }
 
@@ -3495,3 +3519,85 @@ body.has-hero-bg .navbar:not(.scrolled) .hamburger {
   .footer-links { align-items: center; }
   .social-links { justify-content: center; }
 }
+
+/* ==========================================================================
+   Back To Top Floating Button
+   ========================================================================== */
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--bg-elevated);
+  color: var(--accent);
+  border: 1.5px solid var(--border-strong);
+  box-shadow: 0 4px 18px rgba(11, 18, 32, 0.12), 0 1px 3px rgba(11, 18, 32, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 990;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(14px) scale(0.92);
+  transition: opacity 0.3s cubic-bezier(0.22, 0.9, 0.24, 1),
+              transform 0.3s cubic-bezier(0.22, 0.9, 0.24, 1),
+              visibility 0.3s,
+              background-color 0.25s ease,
+              border-color 0.25s ease,
+              color 0.25s ease,
+              box-shadow 0.25s ease;
+}
+
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0) scale(1);
+}
+
+.back-to-top:hover {
+  background: var(--gradient-accent);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 8px 24px -4px rgba(192, 124, 18, 0.5), 0 2px 6px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px) scale(1.06);
+}
+
+.back-to-top:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.back-to-top:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+}
+
+[data-theme="dark"] .back-to-top {
+  background-color: var(--bg-elevated);
+  border-color: var(--border);
+  color: var(--accent);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.55);
+}
+
+[data-theme="dark"] .back-to-top:hover {
+  background: var(--gradient-accent);
+  color: #ffffff;
+  border-color: transparent;
+  box-shadow: 0 8px 26px -4px rgba(240, 173, 61, 0.45);
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    bottom: 20px;
+    right: 20px;
+    width: 44px;
+    height: 44px;
+    font-size: 1.15rem;
+  }
+}
+

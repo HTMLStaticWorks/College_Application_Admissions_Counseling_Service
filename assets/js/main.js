@@ -198,6 +198,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+  /* ==========================================================================
+     Back To Top Button
+     ========================================================================== */
+  function initBackToTop() {
+    let btn = document.getElementById('back-to-top');
+    if (!btn) {
+      btn = document.createElement('button');
+      btn.id = 'back-to-top';
+      btn.className = 'back-to-top';
+      btn.setAttribute('type', 'button');
+      btn.setAttribute('aria-label', 'Back to top');
+      btn.setAttribute('title', 'Back to top');
+      btn.innerHTML = '<i class="ph-bold ph-arrow-up"></i>';
+      document.body.appendChild(btn);
+    }
+
+    let ticking = false;
+    const toggleVisible = () => {
+      if (window.scrollY > 300) {
+        btn.classList.add('visible');
+      } else {
+        btn.classList.remove('visible');
+      }
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) {
+        window.requestAnimationFrame(toggleVisible);
+        ticking = true;
+      }
+    }, { passive: true });
+
+    toggleVisible();
+
+    btn.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  }
+
+  initBackToTop();
+
 });
 
 /* ==========================================================================
