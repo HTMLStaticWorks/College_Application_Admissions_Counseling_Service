@@ -1742,6 +1742,14 @@ html[dir="rtl"] .story-card-school {
 
   .hamburger { display: flex; }
 
+  /* The drawer trigger reads as ink on light theme, even over a dark hero photo */
+  :root:not([data-theme="dark"]) .hamburger,
+  :root:not([data-theme="dark"]) body.has-hero-bg .navbar:not(.scrolled) .hamburger {
+    color: #0b1220;
+    background-color: rgba(255, 255, 255, 0.92);
+    border-color: rgba(11, 18, 32, 0.18);
+  }
+
   .nav-drawer { display: flex; }
   .nav-drawer.open { right: 0; }
   .drawer-overlay.open { display: block; opacity: 1; }
@@ -2513,13 +2521,6 @@ html[dir="rtl"] .password-toggle {
   color: var(--accent);
   border-color: var(--accent);
   background-color: var(--accent-tint);
-}
-
-.icon-btn-avatar {
-  border-radius: 50%;
-  color: var(--accent);
-  background-color: var(--accent-tint);
-  border-color: var(--accent-tint-strong);
 }
 
 /* ---------- Main ---------- */
@@ -3796,7 +3797,7 @@ button.pill:active { transform: translateY(0); }
 
 /* ===== Brand logo: one SVG, one size, one colour everywhere ===== */
 .logo-img {
-  height: 40px;
+  height: 52px;
   width: auto;
   display: block;
   flex-shrink: 0;
@@ -3826,6 +3827,6 @@ button.pill:active { transform: translateY(0); }
   gap: 0;
 }
 
-/* Auth pages give the logo a little more presence */
+/* Every placement - navbar, drawer, sidebar, topbar, footer, auth - shares one height */
 .auth-brand .logo-img,
 .auth-logo .logo-img { height: 52px; }
