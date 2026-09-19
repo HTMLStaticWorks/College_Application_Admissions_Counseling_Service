@@ -1433,8 +1433,10 @@ html[dir="rtl"] .story-card-school {
 
 .price-flag {
   position: absolute;
-  top: var(--spacing-4);
-  right: var(--spacing-4);
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
   padding: 5px 14px;
   border-radius: var(--radius-pill);
   background: var(--gradient-accent);
@@ -1575,8 +1577,31 @@ html[dir="rtl"] .story-card-school {
   border: 1px solid var(--accent-tint-strong);
 }
 
-.resource-card h4 { margin-bottom: var(--spacing-1); }
-.resource-card p { color: var(--text-muted); font-size: 0.93rem; margin-bottom: var(--spacing-2); }
+/* Body column keeps title, copy and meta on the same lines across all three cards */
+.resource-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+}
+
+.resource-card h4 {
+  margin-bottom: var(--spacing-1);
+  min-height: calc(2 * 1.3em);
+  width: 100%;
+  display: grid;
+  place-items: center stretch;
+}
+
+.resource-card p {
+  color: var(--text-muted);
+  font-size: 0.93rem;
+  margin-bottom: var(--spacing-3);
+  flex: 1;
+}
+
+.resource-card .resource-meta { margin-top: auto; }
 
 .resource-meta {
   display: inline-flex;
@@ -2083,7 +2108,7 @@ html[dir="rtl"] .password-toggle {
   align-items: flex-start;
   gap: 10px;
   margin: 16px 0 24px 0;
-  text-align: left;
+  text-align: start;
 }
 
 .auth-terms-row .auth-checkbox {
@@ -3494,18 +3519,21 @@ body.has-hero-bg .navbar:not(.scrolled) .hamburger {
 .split-copy--center { text-align: center; }
 .split-copy--center h2 { text-align: center; }
 
-/* Lists: each row centered on the column, icon and label together. */
+/* Lists: block centered on the column, rows left-aligned to a shared edge. */
 .split-copy--center ul {
   list-style: none;
   padding-inline-start: 0;
   display: flex;
+  width: fit-content;
+  margin-inline: auto;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
+  text-align: left;
 }
 
 .split-copy--center ul li {
-  justify-content: center;
-  text-align: center;
+  justify-content: flex-start;
+  text-align: left;
 }
 
 /* Footer: four across, 2x2 on tablet, single column on phones */
@@ -3601,3 +3629,203 @@ body.has-hero-bg .navbar:not(.scrolled) .hamburger {
   }
 }
 
+
+/* Light theme: airy cream footer instead of the ink panel */
+:root:not([data-theme="dark"]) .footer {
+  background: linear-gradient(180deg, #fbfaf6 0%, #f1efe9 100%);
+  color: var(--text-main);
+  border-top: 1px solid var(--border);
+}
+
+:root:not([data-theme="dark"]) .footer::before { opacity: 0.4; }
+
+:root:not([data-theme="dark"]) .footer::after { background: rgba(192, 124, 18, 0.14); }
+
+:root:not([data-theme="dark"]) .footer .logo,
+:root:not([data-theme="dark"]) .footer-col h4 { color: var(--primary); }
+
+:root:not([data-theme="dark"]) .footer-col p,
+:root:not([data-theme="dark"]) .footer-links a { color: var(--text-muted); }
+
+:root:not([data-theme="dark"]) .footer-links a:hover { color: var(--accent); }
+
+:root:not([data-theme="dark"]) .social-links a {
+  background-color: rgba(11, 18, 32, 0.04);
+  border-color: var(--border-strong);
+  color: var(--primary);
+}
+
+:root:not([data-theme="dark"]) .social-links a:hover { color: #fff; }
+
+:root:not([data-theme="dark"]) .footer-bottom {
+  border-top-color: var(--border);
+  color: var(--text-muted);
+}
+
+/* Timeline explorer in RTL: mirror the fill, hover nudge and copy alignment */
+html[dir="rtl"] .tl-panel { text-align: right; }
+html[dir="rtl"] .tl-progress i { left: auto; right: 0; }
+html[dir="rtl"] .tl-item:hover { transform: translateX(-4px); }
+
+/* Counselor cards stay centred in both directions */
+html[dir="rtl"] .counselor-grid .card {
+  direction: ltr;
+  text-align: center;
+}
+
+/* ===== FAQ accordion (contact) ===== */
+.faq-list {
+  max-width: 820px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.faq-item {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--bg-elevated);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: border-color 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out);
+}
+
+.faq-item.open {
+  border-color: var(--accent-tint-strong);
+  box-shadow: var(--shadow);
+}
+
+.faq-q {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--spacing-3);
+  padding: var(--spacing-4);
+  background: none;
+  border: none;
+  text-align: start;
+  cursor: pointer;
+  color: var(--primary);
+  font-family: var(--font-body);
+  font-size: var(--size-label);
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.faq-q:hover { color: var(--accent); }
+
+.faq-q i {
+  flex-shrink: 0;
+  font-size: 1.15rem;
+  color: var(--accent);
+  transition: transform 0.35s var(--ease-out);
+}
+
+.faq-item.open .faq-q i { transform: rotate(180deg); }
+
+.faq-a {
+  overflow: hidden;
+  height: 0;
+  transition: height 0.35s var(--ease-out);
+}
+
+.faq-a p {
+  margin: 0;
+  padding: 0 var(--spacing-4) var(--spacing-4);
+  color: var(--text-muted);
+  font-size: var(--size-label);
+}
+
+.faq-a a { color: var(--accent); font-weight: 500; }
+.faq-a a:hover { text-decoration: underline; }
+
+/* Contact column: heading and "Follow us" follow the reading direction */
+.contact-follow .trust-label { text-align: start; }
+
+/* Clickable pills (dashboard overview actions) get a real hover state */
+a.pill,
+button.pill {
+  cursor: pointer;
+  border: none;
+  font-family: var(--font-body);
+  transition: transform 0.3s var(--ease-out), box-shadow 0.3s var(--ease-out),
+    background-color 0.3s var(--ease-out), color 0.3s var(--ease-out), filter 0.3s var(--ease-out);
+}
+
+a.pill:hover,
+button.pill:hover { transform: translateY(-2px); }
+
+a.pill-solid:hover,
+button.pill-solid:hover { filter: brightness(1.06); box-shadow: 0 18px 38px -16px rgba(192, 124, 18, 0.7); }
+
+a.pill-soft:hover,
+button.pill-soft:hover { background-color: var(--accent-tint-strong); }
+
+a.pill-muted:hover,
+button.pill-muted:hover { color: var(--accent); border-color: var(--accent-tint-strong); }
+
+a.pill:focus-visible,
+button.pill:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+a.pill:active,
+button.pill:active { transform: translateY(0); }
+
+/* Receipt download links in the payment history table */
+.dash-download {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--accent);
+  font-weight: 500;
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s var(--ease-out), border-color 0.3s var(--ease-out);
+}
+
+.dash-download i { transition: transform 0.3s var(--ease-out); }
+
+.dash-download:hover {
+  color: var(--accent-2);
+  border-bottom-color: currentColor;
+}
+
+.dash-download:hover i { transform: translateY(2px); }
+
+.dash-download:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* ===== Brand logo: one SVG, one size, one colour everywhere ===== */
+.logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  flex-shrink: 0;
+  filter: none;
+  opacity: 1;
+  transition: none;
+}
+
+.logo:hover .logo-img,
+.auth-brand:hover .logo-img,
+.logo:focus .logo-img,
+.auth-brand:focus .logo-img,
+.logo:hover,
+.auth-brand:hover {
+  filter: none;
+  opacity: 1;
+  transform: none;
+}
+
+/* Neutralise the old text-logo sizing so every placement matches */
+.sidebar-head .logo,
+.topbar-lead .logo,
+.footer .logo,
+.auth-brand,
+.auth-logo {
+  font-size: 0;
+  gap: 0;
+}
+
+/* Auth pages give the logo a little more presence */
+.auth-brand .logo-img,
+.auth-logo .logo-img { height: 52px; }

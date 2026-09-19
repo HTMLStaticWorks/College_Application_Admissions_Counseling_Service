@@ -639,8 +639,8 @@ document.addEventListener('DOMContentLoaded', () => {
           '<span class="tl-phase-tag">' + esc(phase.tag) + '</span>' +
           '<h3>' + esc(phase.title) + '</h3>' +
           '<p style="color: var(--text-muted);">' + esc(phase.copy) + '</p>' +
-          '<div class="stat-item" style="text-align: left; padding: 0; margin-top: var(--spacing-4);">' +
-            '<div class="stat-value" style="font-size: 2.4rem;">' + esc(phase.stat[0]) + '</div>' +
+          '<div class="stat-item" style="text-align: start; padding: 0; margin-top: var(--spacing-4);">' +
+            '<div class="stat-value" style="font-size: 2.4rem;"><bdi dir="ltr">' + esc(phase.stat[0]) + '</bdi></div>' +
             '<div class="stat-label" style="letter-spacing: 0.06em;">' + esc(phase.stat[1]) + '</div>' +
           '</div>' +
         '</div>' +
@@ -652,6 +652,66 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     select(0);
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', init);
+  } else {
+    init();
+  }
+})();
+
+/* ==========================================================================
+   Interactive: FAQ Accordion (contact.html)
+   ========================================================================== */
+(function () {
+  'use strict';
+
+  function init() {
+    var items = document.querySelectorAll('.faq-item');
+    if (!items.length) return;
+
+    function close(item) {
+      var panel = item.querySelector('.faq-a');
+      var btn = item.querySelector('.faq-q');
+      if (!panel || !item.classList.contains('open')) return;
+      panel.style.height = panel.scrollHeight + 'px';
+      void panel.offsetHeight; // lock the current height before collapsing
+      panel.style.height = '0px';
+      item.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    }
+
+    function open(item) {
+      var panel = item.querySelector('.faq-a');
+      var btn = item.querySelector('.faq-q');
+      if (!panel) return;
+      panel.style.height = panel.scrollHeight + 'px';
+      item.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+    }
+
+    items.forEach(function (item) {
+      var btn = item.querySelector('.faq-q');
+      var panel = item.querySelector('.faq-a');
+      if (!btn || !panel) return;
+
+      // Let an open panel grow with its content once the transition settles.
+      panel.addEventListener('transitionend', function (e) {
+        if (e.propertyName === 'height' && item.classList.contains('open')) {
+          panel.style.height = 'auto';
+        }
+      });
+
+      btn.addEventListener('click', function () {
+        if (item.classList.contains('open')) {
+          close(item);
+          return;
+        }
+        items.forEach(close); // one answer open at a time
+        open(item);
+      });
+    });
   }
 
   if (document.readyState === 'loading') {
