@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Campusly</title>
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Reveal-on-scroll: flag JS before first paint to avoid a flash -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-student"></i>
+        Campusly<span>.</span>
+      </a>
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="counselors.html" class="nav-link">Counselors</a>
+        <a href="blog.html" class="nav-link active">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary" style="padding: 8px 20px;">Login</a>
+      </div>
+      <button class="hamburger" aria-label="Menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">Campusly<span>.</span></a>
+      <button class="drawer-close" aria-label="Close Menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="counselors.html" class="nav-link">Counselors</a>
+      <a href="blog.html" class="nav-link active">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+      <div class="drawer-actions-row">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Page Header -->
+    <section class="page-hero has-grid">
+      <div class="container" style="text-align: center;">
+        <span class="eyebrow animate-fade-up"><span class="eyebrow-dot"></span> Insights</span>
+        <h1 class="animate-fade-up delay-1">Admissions Insights</h1>
+        <p class="lead animate-fade-up delay-2" style="max-width: 600px; margin: 0 auto;">Expert advice, deadline
+          reminders, and strategies from former admissions officers.</p>
+      </div>
+    </section>
+
+    <!-- Blog Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="post-grid">
+
+          <!-- Blog Card 1 -->
+          <a href="blog-single.html" class="card post-card animate-fade-up delay-1">
+            <img src="assets/images/blog-common-app-why.jpg" alt="Student writing" class="post-card-media">
+            <div class="post-card-body">
+              <span class="post-card-tag">Essay Advice</span>
+              <h3>How to Find Your "Why" for the Common App</h3>
+              <p>Stop writing about sports injuries and mission trips. Here's how to dig deeper for a personal statement
+                that actually stands out.</p>
+              <span class="post-readmore">Read more <i class="ph ph-arrow-right"></i></span>
+              <div class="post-card-meta">
+                <span class="caption">By Dr. Elena </span>
+                <span class="caption">Oct 12, 2026</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Blog Card 2 -->
+          <a href="blog-single.html" class="card post-card animate-fade-up delay-2">
+            <img src="assets/images/blog-early-decision-strategy.jpg" alt="Campus tour" class="post-card-media">
+            <div class="post-card-body">
+              <span class="post-card-tag">Strategy</span>
+              <h3>Early Decision vs. Early Action: A Strategic Guide</h3>
+              <p>Understanding the nuanced differences between early application rounds and how to maximize your
+                statistical advantage.</p>
+              <span class="post-readmore">Read more <i class="ph ph-arrow-right"></i></span>
+              <div class="post-card-meta">
+                <span class="caption">By Marcus Chen</span>
+                <span class="caption">Sep 28, 2026</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Blog Card 3 -->
+          <a href="blog-single.html" class="card post-card animate-fade-up delay-3">
+            <img src="assets/images/blog-alumni-interview-questions.jpg" alt="Interview" class="post-card-media">
+            <div class="post-card-body">
+              <span class="post-card-tag">Interviews</span>
+              <h3>The 5 Questions Every Alumni Interviewer Asks</h3>
+              <p>Preparation is key. Don't be caught off guard by these standard (but deceptively tricky) interview
+                questions.</p>
+              <span class="post-readmore">Read more <i class="ph ph-arrow-right"></i></span>
+              <div class="post-card-meta">
+                <span class="caption">By Sarah Jenkins</span>
+                <span class="caption">Sep 15, 2026</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Blog Card 4 -->
+          <a href="blog-single.html" class="card post-card animate-fade-up delay-1">
+            <img src="assets/images/blog-financial-aid-letter.jpg" alt="Financial aid paperwork and a calculator"
+              class="post-card-media" loading="lazy">
+            <div class="post-card-body">
+              <span class="post-card-tag">Financial Aid</span>
+              <h3>Reading a Financial Aid Letter</h3>
+              <p>Grants, loans and work-study rarely sit in the same column. Here is how to turn three offers into one
+                honest cost comparison.</p>
+              <span class="post-readmore">Read more <i class="ph ph-arrow-right"></i></span>
+              <div class="post-card-meta">
+                <span class="caption">By Priya Raman</span>
+                <span class="caption">Sep 2, 2026</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Blog Card 5 -->
+          <a href="blog-single.html" class="card post-card animate-fade-up delay-2">
+            <img src="assets/images/blog-activity-list-storytelling.jpg"
+              alt="Student building an activity list at a desk" class="post-card-media" loading="lazy">
+            <div class="post-card-body">
+              <span class="post-card-tag">Activities</span>
+              <h3>Your Activity List Is a Story, Not an Inventory</h3>
+              <p>Ten shallow entries lose to four with a through line. How committees read depth, and how to show yours
+                in 150 characters.</p>
+              <span class="post-readmore">Read more <i class="ph ph-arrow-right"></i></span>
+              <div class="post-card-meta">
+                <span class="caption">By Marcus Chen</span>
+                <span class="caption">Aug 21, 2026</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Blog Card 6 -->
+          <a href="blog-single.html" class="card post-card animate-fade-up delay-3">
+            <img src="assets/images/blog-test-optional-standardized-tests.jpg"
+              alt="Student studying for standardized tests" class="post-card-media" loading="lazy">
+            <div class="post-card-body">
+              <span class="post-card-tag">Test Optional</span>
+              <h3>Test Optional Still Means Test Considered</h3>
+              <p>When a score helps, when it quietly hurts, and the score bands that should decide it for you at each
+                tier of school.</p>
+              <span class="post-readmore">Read more <i class="ph ph-arrow-right"></i></span>
+              <div class="post-card-meta">
+                <span class="caption">By Dr. Elena Rodriguez</span>
+                <span class="caption">Aug 8, 2026</span>
+              </div>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Resource Library -->
+    <section class="section has-mesh" id="resources" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <div class="divider-rule"></div>
+          <h2>The admissions resource library</h2>
+          <p>Free guides, templates and checklists our counselors use with students every cycle.</p>
+        </div>
+
+        <div class="resource-grid">
+          <div class="resource-card animate-fade-up delay-1">
+            <div class="resource-icon"><i class="ph ph-file-text"></i></div>
+            <div>
+              <h4>The Personal Statement Workbook</h4>
+              <p>Thirty brainstorming prompts, three annotated sample essays and the outline structure our counselors
+                teach.</p>
+              <span class="resource-meta"><i class="ph ph-download-simple"></i> PDF &middot; 42 pages</span>
+            </div>
+          </div>
+
+          <div class="resource-card animate-fade-up delay-2">
+            <div class="resource-icon"><i class="ph ph-list-checks"></i></div>
+            <div>
+              <h4>Senior Year Deadline Tracker</h4>
+              <p>Every early and regular deadline for the Top 100 schools, laid out in a spreadsheet you can duplicate.
+              </p>
+              <span class="resource-meta"><i class="ph ph-table"></i> Spreadsheet &middot; Updated monthly</span>
+            </div>
+          </div>
+
+          <div class="resource-card animate-fade-up delay-3">
+            <div class="resource-icon"><i class="ph ph-scales"></i></div>
+            <div>
+              <h4>Reach, Target &amp; Safety Calculator</h4>
+              <p>Plot your academic profile against admitted-student data to see where each school honestly falls for
+                you.</p>
+              <span class="resource-meta"><i class="ph ph-chart-bar"></i> Worksheet &middot; Data through 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="animate-fade-up delay-4" style="margin-top: var(--spacing-7);">
+          <p class="trust-label" style="margin-bottom: var(--spacing-4);">Browse by topic</p>
+          <div class="tag-cloud">
+            <span class="tag">Essay Advice</span>
+            <span class="tag">Early Decision</span>
+            <span class="tag">Financial Aid</span>
+            <span class="tag">Interviews</span>
+            <span class="tag">Test Optional</span>
+            <span class="tag">International Students</span>
+            <span class="tag">Transfer Applications</span>
+            <span class="tag">Waitlists</span>
+            <span class="tag">Recommendation Letters</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="color: #ffffff; margin-bottom: var(--spacing-3);">
+            <i class="ph-fill ph-student" style="color: var(--accent);"></i>
+            Campusly<span>.</span>
+          </a>
+          <p>Premium admissions counseling helping ambitious students reach their full potential.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="counselors.html">Our Counselors</a>
+            <a href="blog.html">Admissions Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="services.html">Essay Coaching</a>
+            <a href="services.html">School Selection</a>
+            <a href="services.html">Interview Prep</a>
+            <a href="services.html">Full Package</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Portals</h4>
+          <div class="footer-links">
+            <a href="login.html">Student Login</a>
+            <a href="register.html">Register</a>
+            <a href="dashboard.html">Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Campusly Admissions Consulting. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,164 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#16233b" />
+      <stop offset="50%" stop-color="#0b1220" />
+      <stop offset="100%" stop-color="#060a12" />
+    </linearGradient>
+
+    <!-- Subtle Rim Light -->
+    <linearGradient id="rimGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#eaa32b" stop-opacity="0.8" />
+      <stop offset="35%" stop-color="#c07c12" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0.05" />
+    </linearGradient>
+
+    <!-- Central Ambient Glow -->
+    <radialGradient id="ambientGlow" cx="50%" cy="45%" r="50%">
+      <stop offset="0%" stop-color="#eaa32b" stop-opacity="0.22" />
+      <stop offset="60%" stop-color="#c07c12" stop-opacity="0.06" />
+      <stop offset="100%" stop-color="#0b1220" stop-opacity="0" />
+    </radialGradient>
+
+    <!-- Gold Gradients -->
+    <!-- Cap Light Facet (Left) -->
+    <linearGradient id="goldFacetLeft" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fff1c2" />
+      <stop offset="40%" stop-color="#f5ba42" />
+      <stop offset="100%" stop-color="#d98218" />
+    </linearGradient>
+
+    <!-- Cap Rich Facet (Right) -->
+    <linearGradient id="goldFacetRight" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#fcd34d" />
+      <stop offset="45%" stop-color="#c07c12" />
+      <stop offset="100%" stop-color="#8f5a06" />
+    </linearGradient>
+
+    <!-- Cap Underneath Rim -->
+    <linearGradient id="goldRim" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8f5a06" />
+      <stop offset="50%" stop-color="#694002" />
+      <stop offset="100%" stop-color="#8f5a06" />
+    </linearGradient>
+
+    <!-- Cap Skull Base Gradient -->
+    <linearGradient id="skullGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#1e3050" />
+      <stop offset="70%" stop-color="#131e33" />
+      <stop offset="100%" stop-color="#0b1220" />
+    </linearGradient>
+
+    <!-- Gold Accent / Trim -->
+    <linearGradient id="goldTrim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffe082" />
+      <stop offset="50%" stop-color="#eaa32b" />
+      <stop offset="100%" stop-color="#b8730e" />
+    </linearGradient>
+
+    <!-- Star Glow -->
+    <filter id="starGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Base Rounded Card (Squircle) -->
+  <rect width="512" height="512" rx="120" fill="url(#bgGrad)" />
+
+  <!-- Outer Border / Glow Rim -->
+  <rect x="8" y="8" width="496" height="496" rx="114" fill="none" stroke="url(#rimGrad)" stroke-width="4" />
+
+  <!-- Ambient Golden Center Glow -->
+  <circle cx="256" cy="245" r="210" fill="url(#ambientGlow)" />
+
+  <!-- ================= EMBLEM GROUP ================= -->
+  <g id="emblem" transform="translate(0, -6)">
+
+    <!-- Open Book / Foundation Wings at the base -->
+    <!-- Shadow beneath book -->
+    <path d="M 125 398 C 170 388 220 388 256 410 C 292 388 342 388 387 398 L 387 428 C 342 418 292 418 256 440 C 220 418 170 418 125 428 Z"
+          fill="#05080f" opacity="0.6" />
+
+    <!-- Left Book Page -->
+    <path d="M 256 392 C 218 368 172 368 126 380 L 126 412 C 172 400 218 400 256 424 Z"
+          fill="url(#goldTrim)" />
+    <!-- Left Book Page Inner Highlight -->
+    <path d="M 252 396 C 216 374 174 374 134 384 L 134 404 C 174 394 216 394 252 416 Z"
+          fill="#fff3c4" opacity="0.35" />
+
+    <!-- Right Book Page -->
+    <path d="M 256 392 C 294 368 340 368 386 380 L 386 412 C 340 400 294 400 256 424 Z"
+          fill="url(#goldFacetRight)" />
+    <!-- Right Book Page Inner Highlight -->
+    <path d="M 260 396 C 296 374 338 374 378 384 L 378 404 C 338 394 296 394 260 416 Z"
+          fill="#fde68a" opacity="0.25" />
+
+    <!-- Book Center Spine Notch -->
+    <path d="M 254 392 L 256 426 L 258 392 Z" fill="#694002" />
+
+    <!-- Skull Cap Body (Underneath Mortarboard) -->
+    <!-- Cap Shell Shadow -->
+    <path d="M 160 218 L 160 286 C 160 354 352 354 352 286 L 352 218 Z"
+          fill="#050912" opacity="0.5" />
+    
+    <!-- Cap Shell Base -->
+    <path d="M 166 220 L 166 280 C 166 344 346 344 346 280 L 346 220 C 316 238 286 244 256 244 C 226 244 196 238 166 220 Z"
+          fill="url(#skullGrad)"
+          stroke="#2a3f66" stroke-width="2.5" />
+
+    <!-- Cap Lower Golden Rim Band -->
+    <path d="M 166 278 C 166 338 346 338 346 278 C 346 348 166 348 166 278 Z"
+          fill="url(#goldTrim)" />
+
+    <!-- Mortarboard Diamond 3D Underside / Bevel -->
+    <!-- Left Under Edge -->
+    <path d="M 76 195 L 76 207 L 256 277 L 256 265 Z" fill="url(#goldRim)" />
+    <!-- Right Under Edge -->
+    <path d="M 256 265 L 256 277 L 436 207 L 436 195 Z" fill="#603702" />
+
+    <!-- Mortarboard Diamond Top - Left Facet -->
+    <path d="M 256 125 L 76 195 L 256 265 Z" fill="url(#goldFacetLeft)" />
+
+    <!-- Mortarboard Diamond Top - Right Facet -->
+    <path d="M 256 125 L 436 195 L 256 265 Z" fill="url(#goldFacetRight)" />
+
+    <!-- Subtle Center Crease Line -->
+    <line x1="256" y1="125" x2="256" y2="265" stroke="#ffffff" stroke-width="1.5" stroke-opacity="0.4" />
+
+    <!-- Tassel Cord Hanging Down -->
+    <!-- Cord Curve -->
+    <path d="M 256 195 C 310 195 386 215 394 245 C 398 260 398 285 398 318"
+          fill="none" stroke="url(#goldTrim)" stroke-width="7" stroke-linecap="round" />
+
+    <!-- Tassel Ring / Ferrule -->
+    <rect x="390" y="318" width="16" height="10" rx="3" fill="#ffe082" stroke="#b8730e" stroke-width="1.5" />
+
+    <!-- Tassel Skirt / Brush -->
+    <path d="M 391 328 L 383 378 C 383 384 413 384 413 378 L 405 328 Z" fill="url(#goldFacetLeft)" />
+    <path d="M 398 328 L 405 328 L 413 378 C 409 382 401 382 398 378 Z" fill="url(#goldFacetRight)" />
+
+    <!-- Mortarboard Apex Golden Button -->
+    <ellipse cx="256" cy="195" rx="15" ry="11" fill="url(#goldTrim)" stroke="#fff8db" stroke-width="2" />
+    <ellipse cx="256" cy="193" rx="8" ry="5" fill="#ffffff" opacity="0.6" />
+
+    <!-- ================= ADMISSIONS SUCCESS STARS ================= -->
+    <!-- Primary Brilliant 4-Point Star (Top-Right) -->
+    <g transform="translate(408, 106)" filter="url(#starGlow)">
+      <!-- Outer shimmer rays -->
+      <path d="M 0 -36 Q 0 0 -36 0 Q 0 0 0 36 Q 0 0 36 0 Q 0 0 0 -36 Z"
+            fill="url(#goldFacetLeft)" />
+      <!-- Inner star core -->
+      <circle cx="0" cy="0" r="6" fill="#ffffff" />
+    </g>
+
+    <!-- Secondary Small Star Sparkle (Above Left Wing) -->
+    <g transform="translate(104, 138)">
+      <path d="M 0 -18 Q 0 0 -18 0 Q 0 0 0 18 Q 0 0 18 0 Q 0 0 0 -18 Z"
+            fill="url(#goldTrim)" opacity="0.85" />
+      <circle cx="0" cy="0" r="3" fill="#ffffff" />
+    </g>
+
+  </g>
+</svg>

@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard - Campusly</title>
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Reveal-on-scroll: flag JS before first paint to avoid a flash -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+  <div class="dashboard-layout">
+
+    <!-- ===================== Sidebar ===================== -->
+    <aside class="dashboard-sidebar" id="dashboard-sidebar">
+      <div class="sidebar-head">
+        <a href="index.html" class="logo">
+          <i class="ph-fill ph-student"></i> Campusly<span>.</span>
+        </a>
+      </div>
+
+      <div class="sidebar-user">
+        <div class="sidebar-avatar">JD</div>
+        <div>
+          <p class="sidebar-user-name">John Doe</p>
+          <p class="caption" style="margin: 0;">Class of 2027</p>
+        </div>
+      </div>
+
+      <nav class="dashboard-nav">
+        <a href="#overview" class="dashboard-link active">
+          <i class="ph ph-squares-four"></i> Overview
+        </a>
+        <a href="#checklist" class="dashboard-link">
+          <i class="ph ph-list-checks"></i> Application Checklist
+        </a>
+        <a href="#essays" class="dashboard-link">
+          <i class="ph ph-file-text"></i> Essay Feedback
+        </a>
+        <a href="#meetings" class="dashboard-link">
+          <i class="ph ph-calendar-blank"></i> Meeting Schedule
+        </a>
+        <a href="#deadlines" class="dashboard-link">
+          <i class="ph ph-clock-countdown"></i> Deadlines
+        </a>
+        <a href="#payments" class="dashboard-link">
+          <i class="ph ph-credit-card"></i> Payment History
+        </a>
+        <a href="#profile" class="dashboard-link">
+          <i class="ph ph-user-circle"></i> Profile Settings
+        </a>
+      </nav>
+
+      <div class="sidebar-foot">
+        <a href="login.html" class="dashboard-link">
+          <i class="ph ph-sign-out"></i> Logout
+        </a>
+      </div>
+    </aside>
+
+    <!-- Backdrop for the drawer below 1024 -->
+    <div class="sidebar-scrim" id="sidebar-scrim" hidden></div>
+
+    <!-- ===================== Content ===================== -->
+    <div class="dashboard-content">
+
+      <!-- Top bar -->
+      <header class="dashboard-topbar">
+        <div class="topbar-lead">
+          <button class="icon-btn" id="sidebar-toggle" aria-label="Open menu" aria-controls="dashboard-sidebar" aria-expanded="false">
+            <i class="ph ph-list"></i>
+          </button>
+          <a href="index.html" class="logo">
+            <i class="ph-fill ph-student"></i> Campusly<span>.</span>
+          </a>
+        </div>
+
+        <div class="topbar-actions">
+          <button class="icon-btn theme-toggle" aria-label="Toggle dark mode">
+            <i class="ph ph-moon"></i>
+          </button>
+          <button class="icon-btn rtl-toggle" aria-label="Toggle RTL layout">
+            <i class="ph ph-arrows-left-right"></i>
+          </button>
+          <button class="icon-btn icon-btn-avatar" aria-label="Account">
+            <i class="ph ph-user"></i>
+          </button>
+        </div>
+      </header>
+
+      <main class="dashboard-main">
+
+        <!-- ===================== Overview ===================== -->
+        <section id="overview" class="dashboard-section animate-fade-up">
+          <h1 class="dashboard-title">Overview</h1>
+
+          <div class="dash-card dash-welcome">
+            <div>
+              <span class="dash-eyebrow">Senior Year &middot; Week 6 of 20</span>
+              <h2>Welcome back, John</h2>
+              <p>Stanford REA closes in 16 days — you have 2 items due before Friday's counselor session.</p>
+            </div>
+            <div class="dash-welcome-actions">
+              <span class="pill pill-soft">Phase 2: Applications</span>
+              <a href="#checklist" class="pill pill-solid">View checklist</a>
+            </div>
+          </div>
+
+          <div class="dash-stats">
+            <div class="dash-card dash-stat">
+              <p class="stat-label">Days to First Deadline</p>
+              <p class="stat-value">16<span class="stat-unit">days</span></p>
+            </div>
+            <div class="dash-card dash-stat">
+              <p class="stat-label">Counselor Sessions</p>
+              <p class="stat-value">7<span class="stat-unit">/ 12 completed</span></p>
+            </div>
+            <div class="dash-card dash-stat">
+              <p class="stat-label">Applications Ready</p>
+              <p class="stat-value">2<span class="stat-unit">of 5 schools</span></p>
+              <div class="progress-track"><div class="progress-fill" style="width: 40%;"></div></div>
+            </div>
+          </div>
+
+          <div class="dash-columns">
+            <div class="dash-card">
+              <div class="dash-card-head">
+                <span class="dash-card-icon"><i class="ph ph-list-checks"></i></span>
+                <h3>Next Actions</h3>
+              </div>
+              <div class="dash-list">
+                <div class="dash-list-item">
+                  <span class="dash-card-icon"><i class="ph ph-file-text"></i></span>
+                  <div>
+                    <h4>Upload Personal Statement, Draft 4</h4>
+                    <p>Incorporate Dr. Rodriguez's notes on the conclusion.</p>
+                  </div>
+                </div>
+                <div class="dash-list-item">
+                  <span class="dash-card-icon"><i class="ph ph-calendar-blank"></i></span>
+                  <div>
+                    <h4>Confirm Oct 15 session</h4>
+                    <p>Essay revision review, 4:00 PM EST.</p>
+                  </div>
+                </div>
+                <div class="dash-list-item">
+                  <span class="dash-card-icon"><i class="ph ph-paper-plane-tilt"></i></span>
+                  <div>
+                    <h4>Send SAT scores to Stanford</h4>
+                    <p>Last checklist item before the REA submission.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="dash-card">
+              <div class="dash-card-head">
+                <span class="dash-card-icon"><i class="ph ph-chat-circle-dots"></i></span>
+                <h3>Recent Feedback</h3>
+              </div>
+              <div class="dash-quote">
+                <blockquote>"The narrative arc in paragraph three is much stronger now — the conclusion still needs the 'why this matters' beat."</blockquote>
+                <cite><i class="ph-fill ph-user-circle"></i> Dr. Elena Rodriguez</cite>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Checklist ===================== -->
+        <section id="checklist" class="dashboard-section animate-fade-up" style="display: none;">
+          <h1 class="dashboard-title">Application Checklist</h1>
+
+          <div class="dash-card dash-welcome">
+            <div>
+              <span class="dash-eyebrow">5 schools tracked</span>
+              <h2>2 of 5 applications complete</h2>
+              <p>Each school unlocks its own checklist as your counselor signs off on the materials.</p>
+            </div>
+            <div class="dash-welcome-actions">
+              <span class="pill pill-success">2/5 Complete</span>
+            </div>
+          </div>
+
+          <div style="display: grid; gap: var(--spacing-4);">
+            <!-- School 1 -->
+            <div class="dash-card">
+              <div class="dash-card-head" style="justify-content: space-between; margin-bottom: var(--spacing-3);">
+                <h3>Stanford University</h3>
+                <span class="pill pill-soft">Restricted Early Action</span>
+              </div>
+              <div class="progress-track" style="margin-bottom: var(--spacing-4);">
+                <div class="progress-fill is-success" style="width: 80%;"></div>
+              </div>
+              <ul style="display: flex; flex-direction: column; gap: var(--spacing-2);">
+                <li style="display: flex; align-items: center; gap: var(--spacing-2);"><i class="ph-fill ph-check-circle" style="color: var(--success);"></i> Personal Statement</li>
+                <li style="display: flex; align-items: center; gap: var(--spacing-2);"><i class="ph-fill ph-check-circle" style="color: var(--success);"></i> Transcripts Sent</li>
+                <li style="display: flex; align-items: center; gap: var(--spacing-2);"><i class="ph-fill ph-check-circle" style="color: var(--success);"></i> Letters of Recommendation</li>
+                <li style="display: flex; align-items: center; gap: var(--spacing-2);"><i class="ph-fill ph-check-circle" style="color: var(--success);"></i> Supplemental Essays</li>
+                <li style="display: flex; align-items: center; gap: var(--spacing-2); color: var(--text-muted);"><i class="ph ph-circle"></i> Test Scores Sent</li>
+              </ul>
+            </div>
+
+            <!-- School 2 -->
+            <div class="dash-card">
+              <div class="dash-card-head" style="justify-content: space-between; margin-bottom: var(--spacing-3);">
+                <h3>UC Berkeley</h3>
+                <span class="pill pill-muted">Regular Decision</span>
+              </div>
+              <div class="progress-track" style="margin-bottom: var(--spacing-4);">
+                <div class="progress-fill" style="width: 40%;"></div>
+              </div>
+              <ul style="display: flex; flex-direction: column; gap: var(--spacing-2);">
+                <li style="display: flex; align-items: center; gap: var(--spacing-2);"><i class="ph-fill ph-check-circle" style="color: var(--success);"></i> UC Application Filled</li>
+                <li style="display: flex; align-items: center; gap: var(--spacing-2); color: var(--text-muted);"><i class="ph ph-circle"></i> PIQ 1 Drafted</li>
+                <li style="display: flex; align-items: center; gap: var(--spacing-2); color: var(--text-muted);"><i class="ph ph-circle"></i> PIQ 2 Drafted</li>
+                <li style="display: flex; align-items: center; gap: var(--spacing-2); color: var(--text-muted);"><i class="ph ph-circle"></i> PIQ 3 Drafted</li>
+                <li style="display: flex; align-items: center; gap: var(--spacing-2); color: var(--text-muted);"><i class="ph ph-circle"></i> PIQ 4 Drafted</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Essays ===================== -->
+        <section id="essays" class="dashboard-section animate-fade-up" style="display: none;">
+          <h1 class="dashboard-title">Essay Feedback</h1>
+
+          <div class="dash-card">
+            <div class="dash-card-head" style="justify-content: space-between; align-items: flex-start;">
+              <div>
+                <h3>Common App Personal Statement</h3>
+                <p class="caption">Draft 3 &middot; Uploaded Oct 10, 2026</p>
+              </div>
+              <span class="pill pill-error">Action Required</span>
+            </div>
+
+            <div class="dash-quote">
+              <blockquote>"The narrative arc in the third paragraph is much stronger now. However, the conclusion still feels a bit rushed — let's expand on the 'why this matters' aspect in our next meeting."</blockquote>
+              <cite><i class="ph-fill ph-user-circle"></i> Dr. Elena Rodriguez</cite>
+            </div>
+
+            <div style="display: flex; gap: var(--spacing-3); margin-top: var(--spacing-4); flex-wrap: wrap;">
+              <button class="btn btn-primary" style="padding: 10px 20px;">Upload Draft 4</button>
+              <button class="btn btn-secondary" style="padding: 10px 20px;">View PDF with Comments</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Meetings ===================== -->
+        <section id="meetings" class="dashboard-section animate-fade-up" style="display: none;">
+          <div class="dash-welcome" style="margin-bottom: var(--spacing-5);">
+            <h1 class="dashboard-title" style="margin-bottom: 0;">Counselor Meetings</h1>
+            <button class="btn btn-primary" style="padding: 10px 22px; font-size: 0.95rem;">Book New Session</button>
+          </div>
+
+          <h4 style="text-align: start; margin-bottom: var(--spacing-3);">Upcoming</h4>
+          <div class="dash-card" style="margin-bottom: var(--spacing-5); border-inline-start: 4px solid var(--accent);">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-3);">
+              <div style="display: flex; align-items: center; gap: var(--spacing-3);">
+                <div style="background-color: var(--bg-subtle); border: 1px solid var(--border); width: 60px; height: 60px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <span style="color: var(--accent); font-weight: var(--weight-label); font-size: 0.85rem;">OCT</span>
+                  <span style="font-weight: 600; font-size: 1.4rem; line-height: 1;">15</span>
+                </div>
+                <div>
+                  <h3 style="margin: 0; font-size: 1.2rem; text-align: start;">Essay Revision Review</h3>
+                  <p class="caption" style="margin: 0;"><i class="ph ph-clock"></i> 4:00 PM – 5:00 PM EST with Dr. Elena Rodriguez</p>
+                </div>
+              </div>
+              <button class="btn btn-primary" style="padding: 10px 20px;">Join Zoom Link</button>
+            </div>
+          </div>
+
+          <h4 style="text-align: start; margin-bottom: var(--spacing-3);">Past</h4>
+          <div class="dash-card" style="opacity: 0.75;">
+            <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: var(--spacing-3);">
+              <div style="display: flex; align-items: center; gap: var(--spacing-3);">
+                <div style="background-color: var(--bg-subtle); border: 1px solid var(--border); width: 60px; height: 60px; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+                  <span style="color: var(--text-muted); font-weight: var(--weight-label); font-size: 0.85rem;">OCT</span>
+                  <span style="color: var(--text-muted); font-weight: 600; font-size: 1.4rem; line-height: 1;">02</span>
+                </div>
+                <div>
+                  <h3 style="margin: 0; font-size: 1.2rem; text-align: start;">School List Finalization</h3>
+                  <p class="caption" style="margin: 0;">Completed &middot; Notes Available</p>
+                </div>
+              </div>
+              <button class="btn btn-secondary" style="padding: 10px 20px;">View Notes</button>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Deadlines ===================== -->
+        <section id="deadlines" class="dashboard-section animate-fade-up" style="display: none;">
+          <h1 class="dashboard-title">Upcoming Deadlines</h1>
+
+          <div class="dash-card">
+            <div class="dash-table-wrap">
+              <!-- Below 640px each row stacks into its own card; the td labels
+                   below become the row headings in that layout. -->
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>School</th>
+                    <th>Deadline Type</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-role="title" data-label="School" style="font-weight: var(--weight-label);">Stanford University</td>
+                    <td data-label="Deadline Type">Restricted Early Action</td>
+                    <td data-label="Date" style="color: var(--error); font-weight: var(--weight-label);">Nov 1, 2026</td>
+                    <td data-label="Status"><span class="pill pill-error">16 Days Left</span></td>
+                  </tr>
+                  <tr>
+                    <td data-role="title" data-label="School" style="font-weight: var(--weight-label);">UC System</td>
+                    <td data-label="Deadline Type">Regular Decision</td>
+                    <td data-label="Date">Nov 30, 2026</td>
+                    <td data-label="Status"><span class="pill pill-soft">In Progress</span></td>
+                  </tr>
+                  <tr>
+                    <td data-role="title" data-label="School" style="font-weight: var(--weight-label);">Harvard University</td>
+                    <td data-label="Deadline Type">Regular Decision</td>
+                    <td data-label="Date">Jan 1, 2027</td>
+                    <td data-label="Status"><span class="pill pill-muted">Not Started</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Payments ===================== -->
+        <section id="payments" class="dashboard-section animate-fade-up" style="display: none;">
+          <h1 class="dashboard-title">Payment History</h1>
+
+          <div class="dash-card dash-welcome">
+            <div>
+              <span class="dash-eyebrow">Plan</span>
+              <h2>Comprehensive Package</h2>
+              <p>Balance due: $0.00</p>
+            </div>
+            <div class="dash-welcome-actions">
+              <span class="pill pill-success"><i class="ph-fill ph-check-circle"></i> Paid in Full</span>
+            </div>
+          </div>
+
+          <div class="dash-card">
+            <div class="dash-card-head">
+              <span class="dash-card-icon"><i class="ph ph-receipt"></i></span>
+              <h3>Transactions</h3>
+            </div>
+            <div class="dash-table-wrap">
+              <table class="dash-table">
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Amount</th>
+                    <th>Receipt</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td data-label="Date">Aug 15, 2026</td>
+                    <td data-role="title" data-label="Description">Comprehensive Package – Installment 2</td>
+                    <td data-label="Amount">$1,500.00</td>
+                    <td data-label="Receipt"><a href="#" style="color: var(--accent);"><i class="ph ph-download-simple"></i> Download</a></td>
+                  </tr>
+                  <tr>
+                    <td data-label="Date">Jul 15, 2026</td>
+                    <td data-role="title" data-label="Description">Comprehensive Package – Installment 1</td>
+                    <td data-label="Amount">$1,500.00</td>
+                    <td data-label="Receipt"><a href="#" style="color: var(--accent);"><i class="ph ph-download-simple"></i> Download</a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ===================== Profile ===================== -->
+        <section id="profile" class="dashboard-section animate-fade-up" style="display: none;">
+          <h1 class="dashboard-title">Profile Settings</h1>
+
+          <div class="dash-card" style="max-width: 620px;">
+            <form class="validate-form" novalidate>
+              <div class="form-group">
+                <label class="form-label" for="profile-name">Full Name</label>
+                <input type="text" id="profile-name" name="name" class="form-control" value="John Doe" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="profile-email">Email Address</label>
+                <input type="email" id="profile-email" name="email" class="form-control" value="john@example.com" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="profile-highschool">High School</label>
+                <input type="text" id="profile-highschool" name="highschool" class="form-control" value="Lincoln High School" required>
+              </div>
+              <div class="form-group">
+                <label class="form-label" for="profile-grad">Graduation Year</label>
+                <input type="text" id="profile-grad" name="grad" class="form-control" value="2027" required>
+              </div>
+              <hr style="border: none; border-top: 1px solid var(--border); margin: var(--spacing-4) 0;">
+              <div class="form-group">
+                <label class="form-label" for="profile-password">New Password</label>
+                <input type="password" id="profile-password" name="password" class="form-control" placeholder="Leave blank to keep current">
+              </div>
+              <button type="submit" class="btn btn-primary">Save Changes</button>
+            </form>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/dashboard.js"></script>
+</body>
+</html>

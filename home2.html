@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campusly - Admissions Consulting (Alternate Home)</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Reveal-on-scroll: flag JS before first paint to avoid a flash -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body class="has-hero-bg">
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-student"></i>
+        Campusly<span>.</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="home2.html" class="nav-link active">Home 2</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="counselors.html" class="nav-link">Counselors</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary" style="padding: 8px 20px;">Login</a>
+      </div>
+
+      <button class="hamburger" aria-label="Menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">Campusly<span>.</span></a>
+      <button class="drawer-close" aria-label="Close Menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html" class="nav-link">Home</a>
+      <a href="home2.html" class="nav-link active">Home 2</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="counselors.html" class="nav-link">Counselors</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+      <div class="drawer-actions-row">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero: full-bleed background image -->
+    <section class="hero-bg hero-bg--center">
+      <div class="hero-bg-media">
+        <img src="assets/images/hero-graduation-celebration.jpg" alt="Students celebrating graduation"
+          fetchpriority="high">
+      </div>
+      <div class="container hero-content">
+        <div class="hero-copy">
+          <span class="eyebrow animate-fade-up"><span class="eyebrow-dot"></span> Former admissions officers</span>
+          <h1 class="animate-fade-up delay-1">Turning ambition into <span class="text-gradient">acceptance</span>.</h1>
+          <p class="lead animate-fade-up delay-2" style="margin-bottom: var(--spacing-5);">Strategic admissions
+            counseling by the people who used to read the applications. We guide you from high school planning to final
+            acceptance letters.</p>
+
+          <div class="hero-stat-pair animate-fade-up delay-3" style="margin-bottom: var(--spacing-5);">
+            <div>
+              <div class="stat-value" data-count-to="98" data-suffix="%" style="font-size: 2.3rem;">0%</div>
+              <p class="stat-label" style="margin: 0;">Top 50 acceptance</p>
+            </div>
+            <div class="hero-stat-divider"></div>
+            <div>
+              <div class="stat-value" data-count-to="15" data-suffix="+" style="font-size: 2.3rem;">0+</div>
+              <p class="stat-label" style="margin: 0;">Years experience</p>
+            </div>
+          </div>
+
+          <div class="hero-actions animate-fade-up delay-4">
+            <a href="contact.html" class="btn btn-primary btn-lg">Start your journey <i
+                class="ph ph-arrow-right"></i></a>
+            <a href="#timeline" class="btn btn-outline btn-lg">See the roadmap</a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- Services Grid (Comprehensive Consulting) -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <h2>Comprehensive Consulting</h2>
+          <p>Everything you need, exactly when you need it.</p>
+        </div>
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="card service-card animate-fade-up delay-1">
+            <div class="service-card-media">
+              <img src="assets/images/essay-brainstorm-outline.jpg" alt="Student brainstorming and drafting essay"
+                loading="lazy">
+              <div class="service-card-badge" aria-hidden="true">
+                <i class="ph ph-pen-nib"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3>Essay Coaching</h3>
+              <p>Brainstorming, outlining, and polishing your personal statement.</p>
+              <a href="services.html#essay-coaching" class="service-card-link">
+                Learn more <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="card service-card animate-fade-up delay-2">
+            <div class="service-card-media">
+              <img src="assets/images/collegiate-campus-pathway.jpg" alt="Collegiate campus for school list selection"
+                loading="lazy">
+              <div class="service-card-badge" aria-hidden="true">
+                <i class="ph ph-graduation-cap"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3>School Selection</h3>
+              <p>Data-driven approaches to building your balanced college list.</p>
+              <a href="services.html#school-selection" class="service-card-link">
+                Learn more <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="card service-card animate-fade-up delay-3">
+            <div class="service-card-media">
+              <img src="assets/images/mock-interview-coaching-session.jpg" alt="Mock interview coaching session"
+                loading="lazy">
+              <div class="service-card-badge" aria-hidden="true">
+                <i class="ph ph-users-three"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3>Interview Prep</h3>
+              <p>Alumni mock interviews and communication coaching.</p>
+              <a href="services.html#interview-prep" class="service-card-link">
+                Learn more <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: var(--spacing-6);">
+          <a href="services.html" class="btn btn-outline">Explore All Packages</a>
+        </div>
+      </div>
+    </section>
+    <!-- Interactive: Application Timeline Explorer -->
+    <section class="section has-mesh" id="timeline" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <div class="divider-rule"></div>
+          <h2>Explore the four-year runway</h2>
+          <p>Select any phase of the journey to see exactly what we work on together &mdash; and what it changes about
+            your odds.</p>
+        </div>
+
+        <div class="animate-fade-up delay-1" id="timeline-explorer">
+          <div class="tl-tabs" role="tablist" aria-label="Application phases"></div>
+          <div class="tl-progress"><i></i></div>
+          <div class="tl-panel"></div>
+        </div>
+
+        <div style="text-align: center; margin-top: var(--spacing-6);">
+          <a href="contact.html" class="btn btn-primary">Map my timeline with a counselor</a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Counselors Preview -->
+    <section class="section" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <h2>Meet Your Mentors</h2>
+          <p>Work directly with experts who have evaluated thousands of applications.</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: var(--spacing-5);">
+          <!-- Counselor 1 -->
+          <div class="card animate-fade-up delay-1" style="padding: 0; overflow: hidden;">
+            <img src="assets/images/counselor-elena-rodriguez.jpg" alt="Counselor Portrait"
+              style="width: 100%; height: 240px; object-fit: cover;">
+            <div style="padding: var(--spacing-4); width: 100%;">
+              <h3>Dr. Elena Rodriguez</h3>
+              <p class="caption"
+                style="color: var(--accent); margin-bottom: var(--spacing-2); font-weight: var(--weight-bold-inline);">
+                Former Admissions Officer, UPenn</p>
+              <p style="font-size: var(--size-caption); color: var(--text-muted);">Specializes in pre-med track and Ivy
+                League strategy.</p>
+            </div>
+          </div>
+          <!-- Counselor 2 -->
+          <div class="card animate-fade-up delay-2" style="padding: 0; overflow: hidden;">
+            <img src="assets/images/counselor-marcus-chen.jpg" alt="Counselor Portrait"
+              style="width: 100%; height: 240px; object-fit: cover;">
+            <div style="padding: var(--spacing-4); width: 100%;">
+              <h3>Marcus Chen</h3>
+              <p class="caption"
+                style="color: var(--accent); margin-bottom: var(--spacing-2); font-weight: var(--weight-bold-inline);">
+                Former Admissions Officer, Stanford</p>
+              <p style="font-size: var(--size-caption); color: var(--text-muted);">Specializes in STEM applications and
+                engineering portfolios.</p>
+            </div>
+          </div>
+        </div>
+        <div style="text-align: center; margin-top: var(--spacing-5);">
+          <a href="counselors.html" class="btn btn-outline">View all counselors</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials: quote-led, dark panel (distinct from the image cards on index) -->
+    <section class="section voices">
+      <div class="container">
+        <div class="section-header voices-header animate-fade-up">
+          <h2>In Their Own Words</h2>
+          <p>Families talk about what the process actually felt like &mdash; not just where it ended.</p>
+        </div>
+
+        <div class="voices-grid">
+          <!-- Featured quote -->
+          <figure class="voice-card voice-card--feature animate-fade-up delay-1">
+            <span class="voice-mark" aria-hidden="true">&ldquo;</span>
+            <div class="voice-stars" aria-label="5 out of 5 stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <blockquote>
+              <p>We came in with a spreadsheet of twenty schools and no idea what any of them wanted. Six weeks later
+                our
+                daughter could explain her own story better than we could. That shift &mdash; from chasing rankings to
+                knowing what she was actually applying for &mdash; was worth every session.</p>
+            </blockquote>
+            <figcaption class="voice-author">
+              <img src="assets/images/voice-avatar-daniel-parent.jpg" alt="Daniel R." class="voice-avatar"
+                loading="lazy">
+              <div class="voice-meta">
+                <h4>Daniel R.</h4>
+                <p>Parent &middot; Northwestern &rsquo;29</p>
+              </div>
+              <span class="voice-tag">Parent</span>
+            </figcaption>
+          </figure>
+
+          <!-- Supporting quotes -->
+          <figure class="voice-card animate-fade-up delay-2">
+            <div class="voice-stars" aria-label="5 out of 5 stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <blockquote>
+              <p>My counselor cut three paragraphs I was proud of and the essay finally sounded like me. Brutal, and
+                completely right.</p>
+            </blockquote>
+            <figcaption class="voice-author">
+              <img src="assets/images/voice-avatar-priya-student.jpg" alt="Priya N." class="voice-avatar"
+                loading="lazy">
+              <div class="voice-meta">
+                <h4>Priya N.</h4>
+                <p>Student &middot; Rice &rsquo;29</p>
+              </div>
+              <span class="voice-tag">Student</span>
+            </figcaption>
+          </figure>
+
+          <figure class="voice-card animate-fade-up delay-3">
+            <div class="voice-stars" aria-label="5 out of 5 stars">
+              <i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i
+                class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i>
+            </div>
+            <blockquote>
+              <p>Deadlines stopped being an argument at our dinner table. Everything lived in one timeline, and my son
+                owned it.</p>
+            </blockquote>
+            <figcaption class="voice-author">
+              <img src="assets/images/voice-avatar-marcus-parent.jpg" alt="Marcus T." class="voice-avatar"
+                loading="lazy">
+              <div class="voice-meta">
+                <h4>Marcus T.</h4>
+                <p>Parent &middot; Georgia Tech &rsquo;28</p>
+              </div>
+              <span class="voice-tag">Parent</span>
+            </figcaption>
+          </figure>
+        </div>
+
+        <div class="voices-footnote animate-fade-up delay-4">
+          <span class="voices-score">5.0</span>
+          <p>Average rating across <strong>500+ families</strong> counseled since 2011.</p>
+          <a href="contact.html" class="btn btn-primary">Talk to a counselor <i class="ph ph-arrow-right"></i></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section has-mesh" style="background: var(--gradient-ink); color: #ffffff;">
+      <div class="container" style="text-align: center; max-width: 820px;">
+        <span class="eyebrow animate-fade-up"
+          style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); color: var(--accent-2);"><span
+            class="eyebrow-dot" style="background: var(--accent-2);"></span> Free 30-minute strategy call</span>
+        <h2 class="animate-fade-up delay-1" style="color: #ffffff; margin-bottom: var(--spacing-3);">Find out where you
+          actually stand.</h2>
+        <p class="lead animate-fade-up delay-2" style="color: rgba(255,255,255,0.78); margin-bottom: var(--spacing-5);">
+          Bring your grades, your activity list and your shortlist. A former admissions officer will read your profile
+          the way a committee would and tell you exactly what to fix first &mdash; no obligation, no sales pitch.</p>
+        <div class="hero-actions animate-fade-up delay-3" style="justify-content: center;">
+          <a href="contact.html" class="btn btn-primary btn-lg">Claim your free call <i
+              class="ph ph-arrow-right"></i></a>
+          <a href="services.html" class="btn btn-lg"
+            style="color: #fff; border: 1.5px solid rgba(255,255,255,0.25);">Compare
+            packages</a>
+        </div>
+        <p class="caption animate-fade-up delay-4" style="color: rgba(255,255,255,0.55); margin: var(--spacing-5) 0 0;">
+          Only 12 new families accepted per
+          counselor each cycle.</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="color: #ffffff; margin-bottom: var(--spacing-3);">
+            <i class="ph-fill ph-student" style="color: var(--accent);"></i>
+            Campusly<span>.</span>
+          </a>
+          <p>Premium admissions counseling helping ambitious students reach their full potential.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="counselors.html">Our Counselors</a>
+            <a href="blog.html">Admissions Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="services.html">Essay Coaching</a>
+            <a href="services.html">School Selection</a>
+            <a href="services.html">Interview Prep</a>
+            <a href="services.html">Full Package</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Portals</h4>
+          <div class="footer-links">
+            <a href="login.html">Student Login</a>
+            <a href="register.html">Register</a>
+            <a href="dashboard.html">Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Campusly Admissions Consulting. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

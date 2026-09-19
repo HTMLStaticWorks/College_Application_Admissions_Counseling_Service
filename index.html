@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campusly - College Application & Admissions Counseling</title>
+  <meta name="description"
+    content="Premium college application and admissions counseling service helping students get into their dream schools.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+  <!-- Icon Font -->
+  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/rtl.css">
+  <!-- Reveal-on-scroll: flag JS before first paint to avoid a flash -->
+  <script>document.documentElement.classList.add('js');</script>
+</head>
+
+<body class="has-hero-bg">
+
+  <!-- Navigation -->
+  <header class="navbar">
+    <div class="navbar-container">
+      <a href="index.html" class="logo">
+        <i class="ph-fill ph-student"></i>
+        Campusly<span>.</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="services.html" class="nav-link">Services</a>
+        <a href="counselors.html" class="nav-link">Counselors</a>
+        <a href="blog.html" class="nav-link">Blog</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+        <a href="login.html" class="btn btn-primary" style="padding: 8px 20px;">Login</a>
+      </div>
+
+      <button class="hamburger" aria-label="Menu">
+        <i class="ph ph-list"></i>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="drawer-overlay"></div>
+  <div class="nav-drawer">
+    <div class="drawer-header">
+      <a href="index.html" class="logo">Campusly<span>.</span></a>
+      <button class="drawer-close" aria-label="Close Menu">
+        <i class="ph ph-x"></i>
+      </button>
+    </div>
+    <nav class="drawer-links">
+      <a href="index.html" class="nav-link active">Home</a>
+      <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="services.html" class="nav-link">Services</a>
+      <a href="counselors.html" class="nav-link">Counselors</a>
+      <a href="blog.html" class="nav-link">Blog</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <a href="dashboard.html" class="nav-link">Dashboard</a>
+    </nav>
+    <div class="drawer-actions">
+      <a href="login.html" class="btn btn-primary" style="width: 100%;">Login</a>
+      <div class="drawer-actions-row">
+        <button class="theme-toggle" aria-label="Toggle Dark Mode">
+          <i class="ph ph-moon"></i>
+        </button>
+        <button class="rtl-toggle" aria-label="Toggle RTL">
+          <i class="ph ph-arrows-left-right"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-bg hero-bg--center">
+      <div class="hero-bg-media">
+        <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?q=80&w=2000&auto=format&fit=crop"
+          alt="University campus building on a bright day" fetchpriority="high">
+      </div>
+      <div class="container hero-content">
+        <span class="eyebrow animate-fade-up"><span class="eyebrow-dot"></span> 2026&ndash;27 cycle now enrolling</span>
+        <h1 class="animate-fade-up delay-1">Get into your dream school with <span class="text-gradient">absolute
+            confidence</span>.</h1>
+        <p class="lead animate-fade-up delay-2" style="margin: 0 auto var(--spacing-5); max-width: 680px;">Expert
+          admissions counseling tailored to ambitious students. We turn complex applications into compelling acceptance
+          stories.</p>
+        <div class="animate-fade-up delay-3"
+          style="display: flex; gap: var(--spacing-3); justify-content: center; flex-wrap: wrap; margin-bottom: var(--spacing-7);">
+          <a href="contact.html" class="btn btn-primary btn-lg">Book a free consultation <i
+              class="ph ph-arrow-right"></i></a>
+          <a href="services.html" class="btn btn-outline btn-lg">Explore our services</a>
+        </div>
+
+        <div class="stat-band animate-fade-up delay-4">
+          <div class="stat-item">
+            <div class="stat-value" data-count-to="98" data-suffix="%">0%</div>
+            <div class="stat-label">Top 50 placement</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" data-count-to="2400" data-suffix="+">0+</div>
+            <div class="stat-label">Students guided</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-value" data-count-to="15" data-suffix="+">0+</div>
+            <div class="stat-label">Years in admissions</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Trust Strip -->
+    <section class="trust-strip">
+      <div class="container">
+        <p class="trust-label">Where our students were admitted last cycle</p>
+      </div>
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span class="marquee-item">Harvard</span>
+          <span class="marquee-item">Stanford</span>
+          <span class="marquee-item">MIT</span>
+          <span class="marquee-item">Yale</span>
+          <span class="marquee-item">Princeton</span>
+          <span class="marquee-item">Columbia</span>
+          <span class="marquee-item">UPenn</span>
+          <span class="marquee-item">Cornell</span>
+          <span class="marquee-item">Duke</span>
+          <span class="marquee-item">UC Berkeley</span>
+        </div>
+        <div class="marquee-track">
+          <span class="marquee-item">Harvard</span>
+          <span class="marquee-item">Stanford</span>
+          <span class="marquee-item">MIT</span>
+          <span class="marquee-item">Yale</span>
+          <span class="marquee-item">Princeton</span>
+          <span class="marquee-item">Columbia</span>
+          <span class="marquee-item">UPenn</span>
+          <span class="marquee-item">Cornell</span>
+          <span class="marquee-item">Duke</span>
+          <span class="marquee-item">UC Berkeley</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <h2>How We Can Help</h2>
+          <p>Comprehensive support across every critical phase of your college application journey.</p>
+        </div>
+        <div class="services-grid">
+          <!-- Service 1 -->
+          <div class="card service-card animate-fade-up delay-1">
+            <div class="service-card-media">
+              <img src="assets/images/essay-coaching-desk-writing.jpg"
+                alt="Student writing and refining a college admissions essay" loading="lazy">
+              <div class="service-card-badge" aria-hidden="true">
+                <i class="ph ph-pen-nib"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3>Essay Coaching</h3>
+              <p>Craft a personal statement that commands attention. We help you find your unique voice and narrative.
+              </p>
+              <a href="services.html#essay-coaching" class="service-card-link">
+                Learn more <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="card service-card animate-fade-up delay-2">
+            <div class="service-card-media">
+              <img src="assets/images/historic-campus-quad.jpg"
+                alt="Historic university campus building representing reach, target, and safety school selection"
+                loading="lazy">
+              <div class="service-card-badge" aria-hidden="true">
+                <i class="ph ph-graduation-cap"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3>School Selection</h3>
+              <p>Strategically build your balanced list of reach, target, and safety schools to maximize acceptances.
+              </p>
+              <a href="services.html#school-selection" class="service-card-link">
+                Learn more <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="card service-card animate-fade-up delay-3">
+            <div class="service-card-media">
+              <img src="assets/images/interview-prep-consultation.jpg"
+                alt="One-on-one college interview preparation and consultation" loading="lazy">
+              <div class="service-card-badge" aria-hidden="true">
+                <i class="ph ph-users-three"></i>
+              </div>
+            </div>
+            <div class="service-card-body">
+              <h3>Interview Prep</h3>
+              <p>Mock interviews and communication coaching to ensure you leave a lasting impression on admissions
+                officers.</p>
+              <a href="services.html#interview-prep" class="service-card-link">
+                Learn more <i class="ph ph-arrow-right"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive: Admissions Readiness Scorecard -->
+    <section class="section has-mesh" id="readiness" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <div class="divider-rule"></div>
+          <h2>How ready is your application, really?</h2>
+          <p>Answer five questions and watch your readiness score update live. No sign-up, no email &mdash; just an
+            honest read on where you stand today.</p>
+        </div>
+
+        <div class="scorecard animate-fade-up delay-1" id="scorecard">
+          <div>
+            <div class="quiz-step" data-metric="academics" data-weight="24">
+              <div class="quiz-q"><span class="q-num">1</span> Where does your unweighted GPA sit today?</div>
+              <div class="chip-row" role="group" aria-label="GPA range">
+                <button type="button" class="chip" data-value="0.35" aria-pressed="false">Below 3.2</button>
+                <button type="button" class="chip" data-value="0.6" aria-pressed="false">3.2 &ndash; 3.6</button>
+                <button type="button" class="chip" data-value="0.85" aria-pressed="false">3.6 &ndash; 3.9</button>
+                <button type="button" class="chip" data-value="1" aria-pressed="false">3.9+</button>
+              </div>
+            </div>
+
+            <div class="quiz-step" data-metric="rigor" data-weight="18">
+              <div class="quiz-q"><span class="q-num">2</span> How rigorous is your course load?</div>
+              <div class="chip-row" role="group" aria-label="Course rigor">
+                <button type="button" class="chip" data-value="0.4" aria-pressed="false">Standard classes</button>
+                <button type="button" class="chip" data-value="0.7" aria-pressed="false">A few honours / AP</button>
+                <button type="button" class="chip" data-value="1" aria-pressed="false">Most rigorous available</button>
+              </div>
+            </div>
+
+            <div class="quiz-step" data-metric="activities" data-weight="22">
+              <div class="quiz-q"><span class="q-num">3</span> What do your activities look like?</div>
+              <div class="chip-row" role="group" aria-label="Extracurricular depth">
+                <button type="button" class="chip" data-value="0.3" aria-pressed="false">Still exploring</button>
+                <button type="button" class="chip" data-value="0.65" aria-pressed="false">Consistent member</button>
+                <button type="button" class="chip" data-value="0.85" aria-pressed="false">Leadership role</button>
+                <button type="button" class="chip" data-value="1" aria-pressed="false">Regional or national
+                  impact</button>
+              </div>
+            </div>
+
+            <div class="quiz-step" data-metric="essays" data-weight="22">
+              <div class="quiz-q"><span class="q-num">4</span> How far along is your personal statement?</div>
+              <div class="chip-row" role="group" aria-label="Essay progress">
+                <button type="button" class="chip" data-value="0.2" aria-pressed="false">Haven't started</button>
+                <button type="button" class="chip" data-value="0.5" aria-pressed="false">Brainstorming ideas</button>
+                <button type="button" class="chip" data-value="0.8" aria-pressed="false">Rough draft written</button>
+                <button type="button" class="chip" data-value="1" aria-pressed="false">Revised and reviewed</button>
+              </div>
+            </div>
+
+            <div class="quiz-step" data-metric="timeline" data-weight="14">
+              <div class="quiz-q"><span class="q-num">5</span> How much runway do you have left?</div>
+              <div class="chip-row" role="group" aria-label="Time remaining">
+                <button type="button" class="chip" data-value="0.45" aria-pressed="false">Applying this fall</button>
+                <button type="button" class="chip" data-value="0.8" aria-pressed="false">One year out</button>
+                <button type="button" class="chip" data-value="1" aria-pressed="false">Two or more years</button>
+              </div>
+            </div>
+
+            <button type="button" class="quiz-reset"><i class="ph ph-arrow-counter-clockwise"></i> Reset
+              answers</button>
+          </div>
+
+          <aside class="score-panel">
+            <p class="stat-label" style="color: rgba(255,255,255,0.55); margin-bottom: var(--spacing-4);">Your live
+              readiness score</p>
+
+            <div class="score-dial">
+              <svg width="190" height="190" viewBox="0 0 190 190" role="img" aria-label="Readiness score dial">
+                <defs>
+                  <linearGradient id="scoreGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffc766"></stop>
+                    <stop offset="100%" stop-color="#c07c12"></stop>
+                  </linearGradient>
+                </defs>
+                <circle class="dial-track" cx="95" cy="95" r="82" fill="none" stroke-width="12"></circle>
+                <circle class="dial-value" cx="95" cy="95" r="82" fill="none" stroke-width="12"></circle>
+              </svg>
+              <div class="dial-readout">
+                <span class="dial-number">0</span>
+                <span class="dial-caption">out of 100</span>
+              </div>
+            </div>
+
+            <span class="score-tier">Getting started</span>
+            <p class="score-note">Answer a few questions and we will map where your application stands today.</p>
+
+            <div class="score-bars">
+              <div class="score-bar-row" data-bar="academics">
+                <div class="score-bar-label"><span>Academic strength</span><span data-bar-value>0%</span></div>
+                <div class="score-bar"><i></i></div>
+              </div>
+              <div class="score-bar-row" data-bar="activities">
+                <div class="score-bar-label"><span>Activity impact</span><span data-bar-value>0%</span></div>
+                <div class="score-bar"><i></i></div>
+              </div>
+              <div class="score-bar-row" data-bar="essays">
+                <div class="score-bar-label"><span>Essay readiness</span><span data-bar-value>0%</span></div>
+                <div class="score-bar"><i></i></div>
+              </div>
+            </div>
+
+            <a href="contact.html" class="btn btn-primary" style="width: 100%;">Review my profile</a>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Success Stories -->
+    <section class="section" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <h2>Admission Success Stories</h2>
+          <p>Real results from students who trusted the Campusly process.</p>
+        </div>
+        <div class="stories-grid">
+          <!-- Story 1: Sarah M. (Stanford University) -->
+          <div class="card story-card animate-fade-up delay-1">
+            <div class="story-card-media">
+              <img src="assets/images/stanford-campus-quad.jpg" alt="Stanford University campus quad" loading="lazy">
+              <div class="story-card-overlay"></div>
+              <span class="story-card-badge">
+                <i class="ph-fill ph-check-circle"></i> Admitted '29
+              </span>
+              <div class="story-card-school">
+                <p class="story-school-tag">Dream School</p>
+                <h4 class="story-school-name">Stanford University</h4>
+              </div>
+            </div>
+            <div class="story-card-body">
+              <div class="story-author-row">
+                <img src="assets/images/testimonial-avatar-sarah-cs-econ.jpg" alt="Sarah M." class="story-author-avatar"
+                  loading="lazy">
+                <div class="story-author-info">
+                  <h4>Sarah M.</h4>
+                  <p>Computer Science &amp; Economics</p>
+                </div>
+              </div>
+              <div class="story-rating" aria-label="5 out of 5 stars">
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+              </div>
+              <p class="story-quote">"I was rejected from my early decision school. Campusly completely revamped my
+                regular decision strategy, and I got into 3 Ivy League schools."</p>
+            </div>
+          </div>
+
+          <!-- Story 2: James K. (MIT) -->
+          <div class="card story-card animate-fade-up delay-2">
+            <div class="story-card-media">
+              <img src="assets/images/mit-campus-dome-hall.jpg" alt="MIT campus hall and dome" loading="lazy">
+              <div class="story-card-overlay"></div>
+              <span class="story-card-badge">
+                <i class="ph-fill ph-check-circle"></i> Admitted '29
+              </span>
+              <div class="story-card-school">
+                <p class="story-school-tag">Dream School</p>
+                <h4 class="story-school-name">MIT</h4>
+              </div>
+            </div>
+            <div class="story-card-body">
+              <div class="story-author-row">
+                <img src="assets/images/testimonial-avatar-james-robotics.jpg" alt="James K."
+                  class="story-author-avatar" loading="lazy">
+                <div class="story-author-info">
+                  <h4>James K.</h4>
+                  <p>Mechanical Eng. &amp; Robotics</p>
+                </div>
+              </div>
+              <div class="story-rating" aria-label="5 out of 5 stars">
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+              </div>
+              <p class="story-quote">"The essay coaching helped me connect my passion for robotics with my community
+                service in a way I never would have thought of on my own."</p>
+            </div>
+          </div>
+
+          <!-- Story 3: Aisha R. (Columbia University) -->
+          <div class="card story-card animate-fade-up delay-3">
+            <div class="story-card-media">
+              <img src="assets/images/columbia-campus-library.jpg" alt="Columbia University historic library"
+                loading="lazy">
+              <div class="story-card-overlay"></div>
+              <span class="story-card-badge">
+                <i class="ph-fill ph-check-circle"></i> Admitted '29
+              </span>
+              <div class="story-card-school">
+                <p class="story-school-tag">Dream School</p>
+                <h4 class="story-school-name">Columbia University</h4>
+              </div>
+            </div>
+            <div class="story-card-body">
+              <div class="story-author-row">
+                <img src="assets/images/testimonial-avatar-aisha-intl-relations.jpg" alt="Aisha R."
+                  class="story-author-avatar" loading="lazy">
+                <div class="story-author-info">
+                  <h4>Aisha R.</h4>
+                  <p>Comparative Lit &amp; Int'l Relations</p>
+                </div>
+              </div>
+              <div class="story-rating" aria-label="5 out of 5 stars">
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+                <i class="ph-fill ph-star"></i>
+              </div>
+              <p class="story-quote">"As an international student, the process felt overwhelming. My counselor broke it
+                down step-by-step and guided me to success."</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section">
+      <div class="container split-row">
+        <div class="split-media animate-fade-up">
+          <img src="assets/images/about-campus-wide-view.jpg" alt="University campus"
+            style="border-radius: var(--radius); box-shadow: var(--shadow);">
+        </div>
+        <div class="split-copy split-copy--center animate-fade-up delay-2">
+          <h2>Why Choose Campusly?</h2>
+          <p class="lead" style="margin-bottom: var(--spacing-4);">We believe that every student has a unique story that
+            top universities want to hear.</p>
+          <p>With over 15 years of combined experience in top-tier university admissions offices, our team knows exactly
+            what it takes to stand out in a hyper-competitive landscape.</p>
+          <ul style="margin: var(--spacing-4) 0; display: flex; flex-direction: column; gap: var(--spacing-2);">
+            <li style="display: flex; align-items: center; gap: var(--spacing-2);"><i class="ph-fill ph-check-circle"
+                style="color: var(--success); font-size: 1.2rem;"></i> 98% Acceptance rate to Top 50 schools</li>
+            <li style="display: flex; align-items: center; gap: var(--spacing-2);"><i class="ph-fill ph-check-circle"
+                style="color: var(--success); font-size: 1.2rem;"></i> Former Admissions Officers on staff</li>
+            <li style="display: flex; align-items: center; gap: var(--spacing-2);"><i class="ph-fill ph-check-circle"
+                style="color: var(--success); font-size: 1.2rem;"></i> Personalized 1-on-1 strategy</li>
+          </ul>
+          <a href="counselors.html" class="btn btn-outline" style="margin-top: var(--spacing-2);">Meet our
+            counselors</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section has-mesh" style="background: var(--gradient-ink); color: #ffffff;">
+      <div class="container" style="text-align: center; max-width: 820px;">
+        <span class="eyebrow animate-fade-up"
+          style="background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.16); color: var(--accent-2);"><span
+            class="eyebrow-dot" style="background: var(--accent-2);"></span> Limited cycle availability</span>
+        <h2 class="animate-fade-up delay-1" style="color: #ffffff; margin-bottom: var(--spacing-3);">Ready to start your
+          journey?</h2>
+        <p class="lead animate-fade-up delay-2" style="color: rgba(255,255,255,0.78); margin-bottom: var(--spacing-5);">
+          Spaces for the upcoming application cycle are limited. Secure your spot and begin building your winning
+          application strategy today.</p>
+        <div class="animate-fade-up delay-3"
+          style="display: flex; gap: var(--spacing-3); justify-content: center; flex-wrap: wrap;">
+          <a href="contact.html" class="btn btn-primary btn-lg">Book a consultation <i
+              class="ph ph-arrow-right"></i></a>
+          <a href="counselors.html" class="btn btn-lg"
+            style="color: #fff; border: 1.5px solid rgba(255,255,255,0.25);">Meet the counselors</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="logo" style="color: #ffffff; margin-bottom: var(--spacing-3);">
+            <i class="ph-fill ph-student" style="color: var(--accent);"></i>
+            Campusly<span>.</span>
+          </a>
+          <p>Premium admissions counseling helping ambitious students reach their full potential.</p>
+          <div class="social-links">
+            <a href="#" aria-label="LinkedIn"><i class="ph ph-linkedin-logo"></i></a>
+            <a href="#" aria-label="X"><i class="ph ph-x-logo"></i></a>
+            <a href="#" aria-label="Instagram"><i class="ph ph-instagram-logo"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <div class="footer-links">
+            <a href="counselors.html">Our Counselors</a>
+            <a href="blog.html">Admissions Blog</a>
+            <a href="contact.html">Contact</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Services</h4>
+          <div class="footer-links">
+            <a href="services.html">Essay Coaching</a>
+            <a href="services.html">School Selection</a>
+            <a href="services.html">Interview Prep</a>
+            <a href="services.html">Full Package</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Portals</h4>
+          <div class="footer-links">
+            <a href="login.html">Student Login</a>
+            <a href="register.html">Register</a>
+            <a href="dashboard.html">Dashboard</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2026 Campusly Admissions Consulting. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+
+</html>

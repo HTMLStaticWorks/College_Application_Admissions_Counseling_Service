@@ -1,0 +1,53 @@
+/* RTL Overrides for Campusly */
+
+html[dir="rtl"], body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Typography Overrides */
+html[dir="rtl"] .section-header {
+  text-align: center; /* Keep headers centered */
+}
+
+/* Margin and Padding logical adjustments */
+html[dir="rtl"] .nav-links {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+html[dir="rtl"] .logo {
+  margin-right: 0;
+  margin-left: auto;
+}
+
+/* Drawer adjustments */
+html[dir="rtl"] .nav-drawer {
+  right: auto;
+  left: -100%;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+  transition: left 0.4s ease-in-out;
+}
+
+html[dir="rtl"] .nav-drawer.open {
+  right: auto;
+  left: 0;
+}
+
+/* Dashboard shell
+   The layout itself is built on logical properties (inset-inline-start,
+   margin-inline-start, border-inline-end), so it mirrors on its own.
+   Only the icon glyphs that imply direction need flipping here. */
+html[dir="rtl"] .dashboard-title,
+html[dir="rtl"] .dash-welcome h2,
+html[dir="rtl"] .dash-card-head h3 {
+  text-align: right;
+}
+
+html[dir="rtl"] .sidebar-foot .dashboard-link i {
+  transform: scaleX(-1);
+}
+
+html[dir="rtl"] .form-group {
+  text-align: right;
+}
