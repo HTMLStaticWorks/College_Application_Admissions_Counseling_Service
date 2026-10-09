@@ -16,7 +16,7 @@
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
-<body class="has-hero-bg">
+<body>
 
   <!-- Navigation -->
   <header class="navbar">
@@ -26,6 +26,7 @@
       <nav class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="home2.html" class="nav-link active">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="counselors.html" class="nav-link">Counselors</a>
         <a href="blog.html" class="nav-link">Blog</a>
@@ -61,6 +62,7 @@
     <nav class="drawer-links">
       <a href="index.html" class="nav-link">Home</a>
       <a href="home2.html" class="nav-link active">Home 2</a>
+      <a href="about.html" class="nav-link">About</a>
       <a href="services.html" class="nav-link">Services</a>
       <a href="counselors.html" class="nav-link">Counselors</a>
       <a href="blog.html" class="nav-link">Blog</a>
@@ -81,40 +83,48 @@
   </div>
 
   <main>
-    <!-- Hero: full-bleed background image -->
-    <section class="hero-bg hero-bg--center">
-      <div class="hero-bg-media">
-        <img src="assets/images/hero-graduation-celebration.jpg" alt="Students celebrating graduation"
-          fetchpriority="high">
-      </div>
-      <div class="container hero-content">
+    <!-- Hero: split editorial layout (Home 1 uses a full-bleed photo) -->
+    <section class="hero-split">
+      <div class="container hero-split-grid">
         <div class="hero-copy">
-          <span class="eyebrow animate-fade-up"><span class="eyebrow-dot"></span> Former admissions officers</span>
+          <span class="eyebrow animate-fade-up"><span class="eyebrow-dot"></span> Class of 2027 &amp; 2028 enrollment open</span>
           <h1 class="animate-fade-up delay-1">Turning ambition into <span class="text-gradient">acceptance</span>.</h1>
-          <p class="lead animate-fade-up delay-2" style="margin-bottom: var(--spacing-5);">Strategic admissions
-            counseling by the people who used to read the applications. We guide you from high school planning to final
-            acceptance letters.</p>
+          <p class="lead animate-fade-up delay-2" style="margin-bottom: var(--spacing-4);">A four-year admissions
+            roadmap built by former admissions officers from Stanford, UPenn and Columbia &mdash; so every course,
+            activity and essay works toward the same story.</p>
 
-          <div class="hero-stat-pair animate-fade-up delay-3" style="margin-bottom: var(--spacing-5);">
-            <div>
-              <div class="stat-value" data-count-to="98" data-suffix="%" style="font-size: 2.3rem;">0%</div>
-              <p class="stat-label" style="margin: 0;">Top 50 acceptance</p>
-            </div>
-            <div class="hero-stat-divider"></div>
-            <div>
-              <div class="stat-value" data-count-to="15" data-suffix="+" style="font-size: 2.3rem;">0+</div>
-              <p class="stat-label" style="margin: 0;">Years experience</p>
-            </div>
-          </div>
+          <ul class="hero-checklist animate-fade-up delay-3">
+            <li><i class="ph-fill ph-check-circle"></i> A personal counselor who has read 10,000+ real applications</li>
+            <li><i class="ph-fill ph-check-circle"></i> A balanced school list and deadline plan tailored to your profile</li>
+            <li><i class="ph-fill ph-check-circle"></i> Unlimited essay drafts until every word sounds like you</li>
+          </ul>
 
           <div class="hero-actions animate-fade-up delay-4">
             <a href="contact.html" class="btn btn-primary btn-lg">Start your journey <i
                 class="ph ph-arrow-right"></i></a>
-            <a href="#timeline" class="btn btn-outline btn-lg">See the roadmap</a>
+            <a href="#deadlines" class="btn btn-outline btn-lg">See key deadlines</a>
+          </div>
+
+          <div class="hero-proof animate-fade-up delay-4">
+            <div class="hero-proof-avatars">
+              <img src="assets/images/testimonial-avatar-sarah-cs-econ.jpg" alt="Sarah M.">
+              <img src="assets/images/testimonial-avatar-james-robotics.jpg" alt="James K.">
+              <img src="assets/images/testimonial-avatar-aisha-intl-relations.jpg" alt="Aisha R.">
+            </div>
+            <p><strong>500+ families</strong> counseled since 2011 &middot; rated <strong>5.0 / 5</strong></p>
+          </div>
+        </div>
+
+        <div class="hero-visual animate-fade-up delay-2">
+          <div class="hero-visual-main">
+            <img src="assets/images/hero-home2-campus-students.jpg" alt="Students attending a university lecture"
+              fetchpriority="high">
+          </div>
+          <div class="hero-visual-inset">
+            <img src="assets/images/students-campus-study-group.jpg" alt="Students collaborating on applications in a library">
           </div>
         </div>
       </div>
-
     </section>
 
     <!-- Services Grid (Comprehensive Consulting) -->
@@ -206,6 +216,73 @@
       </div>
     </section>
 
+    <!-- Application Timeline / Important Deadlines -->
+    <section class="section" id="deadlines">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <div class="divider-rule"></div>
+          <h2>Important Application Deadlines</h2>
+          <p>The dates that shape every application cycle. We build your plan backwards from these so nothing is
+            rushed in the final week.</p>
+        </div>
+
+        <div class="deadline-list">
+          <div class="deadline-row animate-fade-up delay-1">
+            <div class="deadline-date"><strong>Aug 1</strong><span>Summer</span></div>
+            <div>
+              <h3>Common App opens</h3>
+              <p>Accounts roll over and new essay prompts go live. Your personal statement should already be in its
+                second draft.</p>
+            </div>
+            <span class="deadline-tag">Kick-off</span>
+          </div>
+          <div class="deadline-row animate-fade-up delay-1">
+            <div class="deadline-date"><strong>Oct 1</strong><span>Fall</span></div>
+            <div>
+              <h3>FAFSA &amp; CSS Profile open</h3>
+              <p>Many schools award aid first-come, first-served. File early and keep copies of every tax document.</p>
+            </div>
+            <span class="deadline-tag">Financial aid</span>
+          </div>
+          <div class="deadline-row animate-fade-up delay-2">
+            <div class="deadline-date"><strong>Nov 1</strong><span>Fall</span></div>
+            <div>
+              <h3>Early Decision &amp; Early Action I</h3>
+              <p>The biggest admissions advantage of the year. ED is binding &mdash; we help you decide if it fits.</p>
+            </div>
+            <span class="deadline-tag deadline-tag--hot">Most critical</span>
+          </div>
+          <div class="deadline-row animate-fade-up delay-2">
+            <div class="deadline-date"><strong>Nov 15</strong><span>Fall</span></div>
+            <div>
+              <h3>UC &amp; select state university applications</h3>
+              <p>The University of California system and several flagships close their single filing window.</p>
+            </div>
+            <span class="deadline-tag">State schools</span>
+          </div>
+          <div class="deadline-row animate-fade-up delay-3">
+            <div class="deadline-date"><strong>Jan 1</strong><span>Winter</span></div>
+            <div>
+              <h3>Regular Decision &amp; Early Decision II</h3>
+              <p>Most highly selective schools close here. Supplements for 10&ndash;15 schools should be finished by
+                mid-December.</p>
+            </div>
+            <span class="deadline-tag deadline-tag--hot">Most critical</span>
+          </div>
+          <div class="deadline-row animate-fade-up delay-3">
+            <div class="deadline-date"><strong>May 1</strong><span>Spring</span></div>
+            <div>
+              <h3>National Decision Day</h3>
+              <p>Compare offers and financial aid letters, appeal where it makes sense, and commit with confidence.</p>
+            </div>
+            <span class="deadline-tag">Decision</span>
+          </div>
+        </div>
+
+        <p class="caption" style="text-align: center; margin-top: var(--spacing-4);">Dates are typical for U.S.
+          colleges; every school publishes its own. Your counselor confirms exact deadlines for your list.</p>
+      </div>
+    </section>
 
     <!-- Counselors Preview -->
     <section class="section" style="background-color: var(--bg-subtle);">
@@ -244,6 +321,74 @@
         </div>
         <div style="text-align: center; margin-top: var(--spacing-5);">
           <a href="counselors.html" class="btn btn-outline">View all counselors</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Student Success Results -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <h2>Results That Speak for Themselves</h2>
+          <p>Measured outcomes from our last five admissions cycles, and the students behind the numbers.</p>
+        </div>
+
+        <div class="results-grid">
+          <div class="result-tile animate-fade-up delay-1">
+            <div class="stat-value" data-count-to="98" data-suffix="%">0%</div>
+            <p>Admitted to at least one Top 50 school</p>
+          </div>
+          <div class="result-tile animate-fade-up delay-2">
+            <div class="stat-value" data-count-to="3" data-suffix="x">0x</div>
+            <p>Ivy+ admit rate vs. national average</p>
+          </div>
+          <div class="result-tile animate-fade-up delay-3">
+            <div class="stat-value" data-count-to="84" data-suffix="%">0%</div>
+            <p>Admitted to their first-choice school</p>
+          </div>
+          <div class="result-tile animate-fade-up delay-4">
+            <div class="stat-value" data-count-to="12" data-prefix="$" data-suffix="M+">$0M+</div>
+            <p>In merit scholarships earned</p>
+          </div>
+        </div>
+
+        <div class="result-stories">
+          <article class="result-story animate-fade-up delay-1">
+            <div class="result-story-head">
+              <img src="assets/images/testimonial-avatar-sarah-cs-econ.jpg" alt="Sarah M." loading="lazy">
+              <div>
+                <h3>Sarah M.</h3>
+                <span>Stanford University &rsquo;29</span>
+              </div>
+            </div>
+            <p>Reframed a scattered CS and economics profile into one story about fair-lending algorithms. Admitted
+              Restrictive Early Action.</p>
+            <div class="result-story-delta"><span>Started with us</span><strong>Junior fall</strong></div>
+          </article>
+          <article class="result-story animate-fade-up delay-2">
+            <div class="result-story-head">
+              <img src="assets/images/testimonial-avatar-james-robotics.jpg" alt="James K." loading="lazy">
+              <div>
+                <h3>James K.</h3>
+                <span>MIT &rsquo;29</span>
+              </div>
+            </div>
+            <p>Turned a robotics hobby into a documented engineering portfolio and an alumni interview he called
+              &ldquo;the best conversation of senior year.&rdquo;</p>
+            <div class="result-story-delta"><span>Started with us</span><strong>Sophomore spring</strong></div>
+          </article>
+          <article class="result-story animate-fade-up delay-3">
+            <div class="result-story-head">
+              <img src="assets/images/testimonial-avatar-aisha-intl-relations.jpg" alt="Aisha R." loading="lazy">
+              <div>
+                <h3>Aisha R.</h3>
+                <span>Columbia University &rsquo;28</span>
+              </div>
+            </div>
+            <p>An international applicant who rebuilt her school list around fit and aid, and earned a full-need
+              financial aid package.</p>
+            <div class="result-story-delta"><span>Started with us</span><strong>Senior summer</strong></div>
+          </article>
         </div>
       </div>
     </section>
@@ -373,6 +518,7 @@
         <div class="footer-col">
           <h4>Company</h4>
           <div class="footer-links">
+            <a href="about.html">About Us</a>
             <a href="counselors.html">Our Counselors</a>
             <a href="blog.html">Admissions Blog</a>
             <a href="contact.html">Contact</a>

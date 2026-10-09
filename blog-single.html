@@ -14,7 +14,7 @@
   <!-- Reveal-on-scroll: flag JS before first paint to avoid a flash -->
   <script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
+<body class="has-hero-bg">
 
   <!-- Navigation -->
   <header class="navbar">
@@ -23,6 +23,7 @@
       <nav class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="counselors.html" class="nav-link">Counselors</a>
         <a href="blog.html" class="nav-link active">Blog</a>
@@ -56,6 +57,7 @@
     <nav class="drawer-links">
       <a href="index.html" class="nav-link">Home</a>
       <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="about.html" class="nav-link">About</a>
       <a href="services.html" class="nav-link">Services</a>
       <a href="counselors.html" class="nav-link">Counselors</a>
       <a href="blog.html" class="nav-link active">Blog</a>
@@ -75,30 +77,31 @@
     </div>
   </div>
 
-  <main style="padding-top: 80px;">
-    
+  <main>
+
     <!-- Article Header -->
-    <section class="section" style="padding-bottom: 0;">
+    <section class="page-hero page-hero--image">
+      <div class="page-hero-media"><img src="assets/images/hero-article-notebook-writing.jpg" alt="Notebook open for essay brainstorming" fetchpriority="high"></div>
       <div class="container" style="max-width: 800px;">
-        <a href="blog.html" style="color: var(--text-muted); font-size: var(--size-caption); display: inline-flex; align-items: center; gap: 4px; margin-bottom: var(--spacing-4);"><i class="ph ph-arrow-left"></i> Back to Blog</a>
-        
-        <span class="caption animate-fade-up" style="color: var(--accent); font-weight: var(--weight-bold-inline); display: block; margin-bottom: var(--spacing-2);">Essay Advice</span>
-        <h1 class="animate-fade-up delay-1" style="text-align: left;">How to Find Your "Why" for the Common App</h1>
-        
-        <div class="animate-fade-up delay-2" style="display: flex; align-items: center; gap: var(--spacing-3); margin-top: var(--spacing-4); margin-bottom: var(--spacing-5);">
+        <a href="blog.html" style="font-size: var(--size-caption); display: inline-flex; align-items: center; gap: 4px; margin-bottom: var(--spacing-4);"><i class="ph ph-arrow-left"></i> Back to Blog</a>
+
+        <span class="caption animate-fade-up" style="font-weight: var(--weight-bold-inline); display: block; margin-bottom: var(--spacing-2);">Essay Advice</span>
+        <h1 class="animate-fade-up delay-1" style="text-align: start;">How to Find Your "Why" for the Common App</h1>
+
+        <div class="animate-fade-up delay-2" style="display: flex; align-items: center; gap: var(--spacing-3); margin-top: var(--spacing-4);">
           <div style="width: 48px; height: 48px; border-radius: 50%; overflow: hidden;">
-            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Author">
+            <img src="assets/images/counselor-elena-rodriguez.jpg" alt="Dr. Elena Rodriguez" style="width: 100%; height: 100%; object-fit: cover;">
           </div>
           <div>
             <p style="margin: 0; font-weight: var(--weight-label);">Dr. Elena Rodriguez</p>
-            <p class="caption" style="margin: 0;">Oct 12, 2026 · 5 min read</p>
+            <p class="caption" style="margin: 0; color: rgba(255,255,255,0.7);">Oct 12, 2026 · 5 min read</p>
           </div>
         </div>
       </div>
     </section>
 
     <!-- Article Content -->
-    <section class="section" style="padding-top: var(--spacing-4);">
+    <section class="section">
       <div class="container" style="max-width: 800px;">
         <img src="https://images.unsplash.com/photo-1517842645767-c639042777db?q=80&w=1200&auto=format&fit=crop" alt="Student writing" style="width: 100%; height: 400px; object-fit: cover; border-radius: var(--radius); margin-bottom: var(--spacing-6); box-shadow: var(--shadow);">
         
@@ -143,6 +146,7 @@
         <div class="footer-col">
           <h4>Company</h4>
           <div class="footer-links">
+            <a href="about.html">About Us</a>
             <a href="counselors.html">Our Counselors</a>
             <a href="blog.html">Admissions Blog</a>
             <a href="contact.html">Contact</a>

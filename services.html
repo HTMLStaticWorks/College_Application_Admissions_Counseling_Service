@@ -16,7 +16,7 @@
   <script>document.documentElement.classList.add('js');</script>
 </head>
 
-<body>
+<body class="has-hero-bg">
 
   <!-- Navigation -->
   <header class="navbar">
@@ -25,6 +25,7 @@
       <nav class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
         <a href="services.html" class="nav-link active">Services</a>
         <a href="counselors.html" class="nav-link">Counselors</a>
         <a href="blog.html" class="nav-link">Blog</a>
@@ -58,6 +59,7 @@
     <nav class="drawer-links">
       <a href="index.html" class="nav-link">Home</a>
       <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="about.html" class="nav-link">About</a>
       <a href="services.html" class="nav-link active">Services</a>
       <a href="counselors.html" class="nav-link">Counselors</a>
       <a href="blog.html" class="nav-link">Blog</a>
@@ -79,7 +81,8 @@
 
   <main>
     <!-- Page Header -->
-    <section class="page-hero has-grid">
+    <section class="page-hero page-hero--image">
+      <div class="page-hero-media"><img src="assets/images/hero-services-essay-writing.jpg" alt="Student writing notes for a college application" fetchpriority="high"></div>
       <div class="container" style="text-align: center;">
         <span class="eyebrow animate-fade-up"><span class="eyebrow-dot"></span> What we do</span>
         <h1 class="animate-fade-up delay-1">Our Services</h1>
@@ -169,8 +172,57 @@
       </div>
     </section>
 
+    <!-- Who We Help -->
+    <section class="section" style="background-color: var(--bg-subtle);">
+      <div class="container">
+        <div class="section-header animate-fade-up">
+          <div class="divider-rule"></div>
+          <h2>Who We Help</h2>
+          <p>Every applicant starts from a different place. Our counseling adapts to where you are today.</p>
+        </div>
+        <div class="audience-grid">
+          <div class="audience-card animate-fade-up delay-1">
+            <span class="icon-wrap"><i class="ph ph-student"></i></span>
+            <h3>High School Students</h3>
+            <p>Grades 9&ndash;12 planning courses, activities and test strategy before the application season begins.</p>
+            <ul>
+              <li><i class="ph ph-check"></i> Four-year academic roadmap</li>
+              <li><i class="ph ph-check"></i> Extracurricular depth over breadth</li>
+            </ul>
+          </div>
+          <div class="audience-card animate-fade-up delay-2">
+            <span class="icon-wrap"><i class="ph ph-users-three"></i></span>
+            <h3>Parents &amp; Families</h3>
+            <p>Clear timelines, honest odds and regular updates, so you can support without managing every detail.</p>
+            <ul>
+              <li><i class="ph ph-check"></i> Monthly progress reports</li>
+              <li><i class="ph ph-check"></i> Financial aid &amp; ED guidance</li>
+            </ul>
+          </div>
+          <div class="audience-card animate-fade-up delay-3">
+            <span class="icon-wrap"><i class="ph ph-globe-hemisphere-west"></i></span>
+            <h3>International Applicants</h3>
+            <p>Students applying to U.S. universities from abroad, navigating a system that works very differently.</p>
+            <ul>
+              <li><i class="ph ph-check"></i> TOEFL / IELTS &amp; credential planning</li>
+              <li><i class="ph ph-check"></i> Need-aware vs. need-blind strategy</li>
+            </ul>
+          </div>
+          <div class="audience-card animate-fade-up delay-4">
+            <span class="icon-wrap"><i class="ph ph-arrows-clockwise"></i></span>
+            <h3>Transfer &amp; Gap-Year Students</h3>
+            <p>Applicants changing schools or returning after time away who need a fresh, credible narrative.</p>
+            <ul>
+              <li><i class="ph ph-check"></i> &ldquo;Why transfer&rdquo; essay coaching</li>
+              <li><i class="ph ph-check"></i> Credit &amp; course-match review</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- Packages & Pricing -->
-    <section class="section has-mesh" id="packages" style="background-color: var(--bg-subtle);">
+    <section class="section has-mesh" id="packages">
       <div class="container">
         <div class="section-header animate-fade-up">
           <div class="divider-rule"></div>
@@ -257,6 +309,7 @@
         <div class="footer-col">
           <h4>Company</h4>
           <div class="footer-links">
+            <a href="about.html">About Us</a>
             <a href="counselors.html">Our Counselors</a>
             <a href="blog.html">Admissions Blog</a>
             <a href="contact.html">Contact</a>

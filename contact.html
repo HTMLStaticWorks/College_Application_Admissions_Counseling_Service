@@ -14,7 +14,7 @@
   <!-- Reveal-on-scroll: flag JS before first paint to avoid a flash -->
   <script>document.documentElement.classList.add('js');</script>
 </head>
-<body>
+<body class="has-hero-bg">
 
   <!-- Navigation -->
   <header class="navbar">
@@ -23,6 +23,7 @@
       <nav class="nav-links">
         <a href="index.html" class="nav-link">Home</a>
         <a href="home2.html" class="nav-link">Home 2</a>
+        <a href="about.html" class="nav-link">About</a>
         <a href="services.html" class="nav-link">Services</a>
         <a href="counselors.html" class="nav-link">Counselors</a>
         <a href="blog.html" class="nav-link">Blog</a>
@@ -56,6 +57,7 @@
     <nav class="drawer-links">
       <a href="index.html" class="nav-link">Home</a>
       <a href="home2.html" class="nav-link">Home 2</a>
+      <a href="about.html" class="nav-link">About</a>
       <a href="services.html" class="nav-link">Services</a>
       <a href="counselors.html" class="nav-link">Counselors</a>
       <a href="blog.html" class="nav-link">Blog</a>
@@ -77,7 +79,8 @@
 
   <main>
     <!-- Page Header -->
-    <section class="page-hero has-grid">
+    <section class="page-hero page-hero--image">
+      <div class="page-hero-media"><img src="assets/images/hero-contact-office.jpg" alt="Campusly counseling office" fetchpriority="high"></div>
       <div class="container" style="text-align: center;">
         <span class="eyebrow animate-fade-up"><span class="eyebrow-dot"></span> Let's talk</span>
         <h1 class="animate-fade-up delay-1">Get in Touch</h1>
@@ -296,6 +299,7 @@
         <div class="footer-col">
           <h4>Company</h4>
           <div class="footer-links">
+            <a href="about.html">About Us</a>
             <a href="counselors.html">Our Counselors</a>
             <a href="blog.html">Admissions Blog</a>
             <a href="contact.html">Contact</a>
